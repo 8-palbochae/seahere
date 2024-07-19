@@ -4,7 +4,7 @@ import bottomIcon from "../../../constants/bottom/bottom.image";
 
 const Bottom = () => {
 	return (
-		<div className="flex flex-row justify-between w-full bottom-0 border-t border-gray-500 bg-white mb-2">
+		<div className="flex flex-row justify-between w-full bottom-0 border-t py-1 border-gray-300 bg-white mb-2">
 			<a
 				href="#"
 				aria-label="홈"
@@ -15,7 +15,7 @@ const Bottom = () => {
 					alt="홈 아이콘"
 					className="w-6 h-6 mb-1"
 				/>
-				<span className="text-xs">홈</span>
+				<span className="text-xs font-extralight text-gray-400">홈</span>
 			</a>
 			<a
 				href="#"
@@ -27,7 +27,7 @@ const Bottom = () => {
 					alt="거래 내역 아이콘"
 					className="w-6 h-6 mb-1"
 				/>
-				<span className="text-xs">거래 내역</span>
+				<span className="text-xs font-extralight text-gray-400">거래 내역</span>
 			</a>
 			<a
 				href="#"
@@ -39,7 +39,7 @@ const Bottom = () => {
 					alt="재고 내역 아이콘"
 					className="w-6 h-6 mb-1"
 				/>
-				<span className="text-xs">재고 내역</span>
+				<span className="text-xs font-extralight text-gray-400">재고 조회</span>
 			</a>
 			<a
 				href="#"
@@ -49,9 +49,9 @@ const Bottom = () => {
 				<img
 					src={bottomIcon.settingIcon}
 					alt="설정 아이콘"
-					className="w-6 h-6 mb-1"
+					className="mb-1"
 				/>
-				<span className="text-xs">설정</span>
+				<span className="text-xs font-extralight text-gray-400">사용자 설정</span>
 			</a>
 		</div>
 	);
