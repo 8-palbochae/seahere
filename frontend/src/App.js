@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Bottom from "./components/common/bottom/Bottom";
+import { Header } from "./components/common/bottom/Header";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="flex justify-center items-center bg-gray-100 jsu">
+			<div className=" flex flex-col w-full max-w-4xl bg-white shadow-md min-h-screen justify-between">
+				<div>
+					<Header />
+				</div>
+				<div className="flex-grow">
+					<h1 className="text-2xl font-bold mb-4">Hello, Musinsa!</h1>
+					<p className="text-gray-700">
+						This is your main content area.
+					</p>
+				</div>
+				<div>
+					<Bottom />
+				</div>
+			</div>
+		</div>
+	);
 }
 
 export default App;
