@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
-import Period from "./components/Trade/Period";
+import Period from "./components/history/Period";
+
 
 function App() {
 	return (

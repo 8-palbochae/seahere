@@ -38,14 +38,14 @@
 }
 
 /* src/index.css 또는 src/App.css에 추가 */
-.ant-picker-dropdown {
+.custom-datepicker-dropdown {
 	left: 50% !important;
 	transform: translateX(-50%) !important;
-	max-width: 100%;
+	max-width: 90%;
   }
   
   @media (max-width: 768px) {
-	.ant-picker-dropdown {
+	.custom-datepicker-dropdown {
 	  width: 90% !important;
 	}
   
@@ -57,5 +57,6 @@
 	  font-size: 14px; /* 모바일에서 달력 텍스트 크기 조정 */
 	}
   }
+  
   
   
