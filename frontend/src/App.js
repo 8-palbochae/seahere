@@ -1,14 +1,29 @@
 import React from "react";
 import "./App.css";
-import Period from "./components/history/Period";
-
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import LoginChoice from "./pages/LoginChoice";
+import Layout from "./pages/layout/Layout";
+import Setting from "./pages/Setting";
+import Main from "./pages/Main";
+import History from "./pages/History";
 
 function App() {
 	return (
-		<div className="flex justify-center items-center min-h-screen to-blue-600">
-			<div className="w-full max-w-4xl bg-white p-8 shadow-md">
-				<Period/>
-			</div>
+		<div className="flex justify-center items-center bg-gray-100 jsu">
+			<BrowserRouter>
+				<Routes>
+					<Route element={<Layout />}>
+						<Route path="/setting" element={<Setting />} />
+						<Route path="/main" element={<Main />} />
+						<Route path="/history" element={<History />} />
+						<Route path="/inventory" />
+						<Route path="/incoming" />
+						<Route path="/outgoing" />
+						<Route path="/setting" />
+					</Route>
+					<Route path="/" element={<LoginChoice />} h />
+				</Routes>
+			</BrowserRouter>
 		</div>
 	);
 }
