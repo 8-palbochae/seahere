@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Bottom from "./components/common/bottom/Bottom";
-import { Header } from "./components/common/bottom/Header";
+import { Header } from './components/common/header/Header';
 
 function App() {
 	return (
