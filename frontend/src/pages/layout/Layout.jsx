@@ -9,7 +9,7 @@ const Layout = () => {
 			<div>
 				<Header />
 			</div>
-			<div className="flex-grow">
+			<div className="flex-grow overflow-y-auto">
 				<Outlet />
 			</div>
 			<div>
