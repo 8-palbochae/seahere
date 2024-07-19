@@ -4,7 +4,7 @@ import { Header } from "./compoents/common/Header";
 
 function App() {
 	return (
-		<div className="flex justify-center items-center bg-gray-100">
+		<div className="flex justify-center items-center bg-gray-100 jsu">
 			<div className="w-full max-w-4xl bg-white p-8 shadow-md p-0  min-h-screen">
 				<div>
 					<Header />
