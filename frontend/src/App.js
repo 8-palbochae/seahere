@@ -1,25 +1,29 @@
 import React from "react";
 import "./App.css";
-import Bottom from "./components/common/bottom/Bottom";
-import { Header } from "./components/common/bottom/Header";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import LoginChoice from "./pages/LoginChoice";
+import Layout from "./pages/layout/Layout";
+import Setting from "./pages/Setting";
+import Main from "./pages/Main";
+import History from "./pages/History";
 
 function App() {
 	return (
 		<div className="flex justify-center items-center bg-gray-100 jsu">
-			<div className=" flex flex-col w-full max-w-4xl bg-white shadow-md min-h-screen justify-between">
-				<div>
-					<Header />
-				</div>
-				<div className="flex-grow">
-					<h1 className="text-2xl font-bold mb-4">Hello, Musinsa!</h1>
-					<p className="text-gray-700">
-						This is your main content area.
-					</p>
-				</div>
-				<div>
-					<Bottom />
-				</div>
-			</div>
+			<BrowserRouter>
+				<Routes>
+					<Route element={<Layout />}>
+						<Route path="/setting" element={<Setting />} />
+						<Route path="/main" element={<Main />} />
+						<Route path="/history" element={<History />} />
+						<Route path="/inventory" />
+						<Route path="/incoming" />
+						<Route path="/outgoing" />
+						<Route path="/setting" />
+					</Route>
+					<Route path="/" element={<LoginChoice />} h />
+				</Routes>
+			</BrowserRouter>
 		</div>
 	);
 }
