@@ -5,7 +5,7 @@ import Bottom from "../../components/common/bottom/Bottom";
 
 const Layout = () => {
 	return (
-		<div className=" flex flex-col w-full max-w-4xl bg-white shadow-md min-h-screen justify-between">
+		<div className=" flex flex-col w-full max-w-4xl bg-white shadow-md min-h-screen justify-between gap-3">
 			<div>
 				<Header />
 			</div>
