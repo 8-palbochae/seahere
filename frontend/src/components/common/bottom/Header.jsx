@@ -1,6 +1,6 @@
 import React from "react";
 // import headerIcon from "../../consts/header/header.image";
-import { ReactComponent as Bell } from "../../assets/header/bell.svg";
+import { ReactComponent as Bell } from "../../../assets/header/bell.svg";
 
 export const Header = () => {
 	return (
