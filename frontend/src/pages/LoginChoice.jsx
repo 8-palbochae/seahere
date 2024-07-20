@@ -1,24 +1,36 @@
 import { Link } from "react-router-dom";
 import MainLogo from '../assets/common/MainLogo.svg';
 import background from '../assets/common/background.svg';
-import naver from '../assets/login/naver.svg';
-import google from '../assets/login/google.svg';
-import middleLine from '../assets/login/middle_Line.svg'
+import naver from '../assets/loginSignup/naver.svg';
+import google from '../assets/loginSignup/google.svg';
+import middleLine from '../assets/loginSignup/middle_Line.svg'
 
 const LoginChoice = () => {
   return (
     <div>
       <div className="relative w-[390px] h-[844px] bg-white">
         <div className="absolute w-[390px] h-[423px] top-[436px] left-1">
-          <img className="w-[390px] h-[390px] top-[33px] left-0 absolute object-cover" src={background} />
+          <img
+            className="w-[390px] h-[390px] top-[33px] left-0 absolute object-cover"
+            src={background}
+          />
           <div className="absolute w-[259px] h-[148px] top-[233px] left-[62px]">
             <div className="absolute w-[135px] h-[62px] top-0 left-[60px]">
-              <img className="w-[62px] h-[62px] top-0 left-[73px] absolute object-cover" src={naver} />
-              <img className="w-16 h-[62px] top-0 left-0 absolute object-cover" src={google} />
+              <img
+                className="w-[62px] h-[62px] top-0 left-[73px] absolute object-cover"
+                src={naver}
+              />
+              <img
+                className="w-16 h-[62px] top-0 left-0 absolute object-cover"
+                src={google}
+              />
             </div>
             <div className="absolute w-[261px] h-[15px] top-[77px] left-0">
               <div className="relative w-[259px] h-[15px]">
-                <img className="absolute w-[259px] h-0.5 top-2 left-0" src={middleLine} />
+                <img
+                  className="absolute w-[259px] h-0.5 top-2 left-0"
+                  src={middleLine}
+                />
                 <div className="w-[33px] top-0 left-[111px] text-black text-[15px] text-center leading-[15px] whitespace-nowrap absolute [font-family:'Inter-Regular',Helvetica] font-normal tracking-[0]">
                   또는
                 </div>
@@ -26,7 +38,7 @@ const LoginChoice = () => {
             </div>
             <div className="absolute w-[222px] h-5 top-32 left-[19px]">
               <div className="absolute w-[220px] top-0 left-0 [font-family:'Inter-Regular',Helvetica] font-normal text-black text-[15px] text-center tracking-[0] leading-[15px]">
-              <Link to={"/signup"}>email로 시작하기</Link>
+                <Link to={"/signup"}>email로 시작하기</Link>
               </div>
             </div>
           </div>
@@ -45,7 +57,7 @@ const LoginChoice = () => {
             </div>
             <div className="top-[66px] absolute w-[273px] h-[52px] left-0.5">
               <div className="relative w-[271px] h-[52px] bg-white rounded-[10px] border border-solid border-black">
-              <div className="relative w-[271px] h-[52px]">
+                <div className="relative w-[271px] h-[52px]">
                   <input
                     type="password"
                     name="email"
@@ -67,11 +79,11 @@ const LoginChoice = () => {
             </div>
           </div>
         </div>
-        <div className="absolute top-[180px] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <img className="w-80 h-80 object-cover" src={MainLogo} alt="Main Logo" />
-        </div>
+        <img
+          className="absolute w-80 h-80 top-[52px] left-[35px] object-cover"
+          src={MainLogo}
+        />
       </div>
-
 
       <div>
         <Link to={"/main"}>메인으로</Link>
