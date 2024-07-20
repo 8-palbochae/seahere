@@ -5,12 +5,12 @@ import Bottom from "../../components/common/bottom/Bottom";
 
 const Layout = () => {
 	return (
-		<div className=" flex flex-col w-full max-w-4xl bg-white shadow-md min-h-screen justify-between gap-3">
+		<div className=" flex flex-col gap-8 w-full max-w-4xl bg-white shadow-md min-h-screen justify-between">
 			<div>
 				<Header />
 			</div>
 			<div className="flex-grow overflow-y-auto">
-				<Outlet />
+				<Outlet className="h-full" />
 			</div>
 			<div>
 				<Bottom />

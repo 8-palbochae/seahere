@@ -10,10 +10,10 @@ const Bottom = () => {
 	};
 	return (
 		<div className="flex flex-row justify-between w-full bottom-0 border-t py-1 border-gray-300 bg-white mb-2">
-			<a
-				href="#"
+			<div
 				aria-label="홈"
 				className="flex flex-col items-center text-gray-600 hover:text-gray-500 flex-1 text-center py-2"
+				onClick={() => onClick("main")}
 			>
 				<img
 					src={bottomIcon.homeIcon}
@@ -23,7 +23,7 @@ const Bottom = () => {
 				<span className="text-xs font-extralight text-gray-400">
 					홈
 				</span>
-			</a>
+			</div>
 			<div
 				aria-label="거래 내역"
 				className="flex flex-col items-center text-gray-600 hover:text-gray-500 flex-1 text-center py-2"
@@ -38,10 +38,10 @@ const Bottom = () => {
 					거래 내역
 				</span>
 			</div>
-			<a
-				href="#"
+			<div
 				aria-label="재고 내역"
 				className="flex flex-col items-center text-gray-600 hover:text-gray-500 flex-1 text-center py-2"
+				onClick={() => onClick("/")}
 			>
 				<img
 					src={bottomIcon.iventoryIcon}
@@ -51,11 +51,11 @@ const Bottom = () => {
 				<span className="text-xs font-extralight text-gray-400">
 					재고 조회
 				</span>
-			</a>
-			<a
-				href="#"
+			</div>
+			<div
 				aria-label="설정"
 				className="flex flex-col items-center text-gray-600 hover:text-gray-500 flex-1 text-center py-2"
+				onClick={() => onClick("setting")}
 			>
 				<img
 					src={bottomIcon.settingIcon}
@@ -65,7 +65,7 @@ const Bottom = () => {
 				<span className="text-xs font-extralight text-gray-400">
 					사용자 설정
 				</span>
-			</a>
+			</div>
 		</div>
 	);
 };
