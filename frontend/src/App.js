@@ -8,6 +8,7 @@ import Main from "./pages/Main";
 import History from "./pages/History";
 import IventoryView from './pages/IventoryView';
 import Income from './pages/Income';
+import SignUpChoice from './pages/SignUpChoice';
 
 function App() {
 	return (
@@ -24,6 +25,7 @@ function App() {
 						<Route path="/setting" />
 					</Route>
 					<Route path="/" element={<LoginChoice />} h />
+					<Route path="/signup" element={<SignUpChoice/>}/>
 				</Routes>
 			</BrowserRouter>
 		</div>

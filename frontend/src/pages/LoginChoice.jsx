@@ -26,7 +26,7 @@ const LoginChoice = () => {
             </div>
             <div className="absolute w-[222px] h-5 top-32 left-[19px]">
               <div className="absolute w-[220px] top-0 left-0 [font-family:'Inter-Regular',Helvetica] font-normal text-black text-[15px] text-center tracking-[0] leading-[15px]">
-                Emali로 시작하기
+              <Link to={"/signup"}>email로 시작하기</Link>
               </div>
             </div>
           </div>
