@@ -28,7 +28,6 @@ const InventoryItem = () => {
                 <div className='text-center text-lg text-gray-700'>100kg</div>
                 <div className='text-center text-sm text-gray-500'>{dayjs().format('YYYY-MM-DD')}</div>
             </div>
-            {/* 세부정보 영역 */}
             <div 
                 className={`transition-height overflow-hidden flex flex-col justify-center items-center ${isExpanded ? 'details-open' : 'details-closed'}`}
             >
