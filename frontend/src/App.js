@@ -6,9 +6,11 @@ import Layout from "./pages/layout/Layout";
 import Setting from "./pages/Setting";
 import Main from "./pages/Main";
 import History from "./pages/History";
-import InventoryView from './pages/InventoryView';
-import Income from './pages/Income';
-import SignUpChoice from './pages/SignUpChoice';
+import InventoryView from "./pages/InventoryView";
+import Income from "./pages/Income";
+import SignUpChoice from "./pages/SignUpChoice";
+import UserInfoSetting from "./components/setting/info/UserInfoSetting";
+import MainSetting from "./components/setting/main/MainSetting";
 
 function App() {
 	return (
@@ -16,15 +18,21 @@ function App() {
 			<BrowserRouter>
 				<Routes>
 					<Route element={<Layout />}>
-						<Route path="/setting" element={<Setting />} />
+						<Route path="/setting" element={<Setting />}>
+							<Route path="" element={<MainSetting />} />
+							<Route
+								path="user-info"
+								element={<UserInfoSetting />}
+							/>
+						</Route>
 						<Route path="/main" element={<Main />} />
 						<Route path="/history" element={<History />} />
-						<Route path="/inventory" element={<InventoryView/>} />
-						<Route path="/incoming" element={<Income/>}/>
+						<Route path="/inventory" element={<InventoryView />} />
+						<Route path="/incoming" element={<Income />} />
 						<Route path="/outgoing" />
 					</Route>
 					<Route path="/" element={<LoginChoice />} h />
-					<Route path="/signup" element={<SignUpChoice/>}/>
+					<Route path="/signup" element={<SignUpChoice />} />
 				</Routes>
 			</BrowserRouter>
 		</div>

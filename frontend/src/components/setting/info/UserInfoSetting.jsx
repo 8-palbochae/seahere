@@ -1,7 +1,7 @@
 import React from "react";
 
-const Info = () => {
+const UserInfoSetting = () => {
 	return <div>인포변경화면입니다.</div>;
 };
 
-export default Info;
+export default UserInfoSetting;

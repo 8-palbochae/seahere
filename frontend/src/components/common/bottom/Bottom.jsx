@@ -9,7 +9,7 @@ const Bottom = () => {
 		navigae(page);
 	};
 	return (
-		<div className="flex flex-row justify-between w-full bottom-0 border-t py-1 border-gray-300 bg-white mb-2">
+		<div className="flex flex-row justify-between w-full bottom-0 border-t  border-gray-300 bg-white">
 			<div
 				aria-label="홈"
 				className="flex flex-col items-center text-gray-600 hover:text-gray-500 flex-1 text-center py-2"
