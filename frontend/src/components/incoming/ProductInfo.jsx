@@ -7,13 +7,13 @@ const ProductInfo = () => {
   return  (
     <div className='shadow-md border border-gray-200 rounded-lg p-6 mt-6 mx-4'>
         <div className='flex justify-center'>
-            <span className='text-black font-bold text-3xl mb-6'>광어</span>
+            <span className='text-black font-bold text-2xl mb-6'>광어</span>
         </div>
         <div className='flex justify-around '>
-            <div className='w-48 h-48  flex justify-center items-center overflow-hidden rounded-xl'>
-                <img src={productImg} alt="" className='w-48 h-48 object-cover'  />
+            <div className='w-36 h-36  flex justify-center items-center overflow-hidden rounded-xl'>
+                <img src={productImg} alt="" className='w-36 h-36 object-cover'  />
             </div>
-            <div className='w-2/5 flex flex-col pl-4 gap-4 justify-between'>
+            <div className='w-3/5 flex flex-col pl-4 gap-4 justify-between'>
                 <Select
                 className='w-full h-full'
                 showSearch

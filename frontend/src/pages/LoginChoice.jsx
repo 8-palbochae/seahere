@@ -6,6 +6,7 @@ const LoginChoice = () => {
 			첫 로그인 선택창 입니다.
 			<div>
 				<Link to={"/main"}>메인으로</Link>
+				<Link to={"/incoming"}>입고화면으로</Link>
 			</div>
 		</div>
 	);
