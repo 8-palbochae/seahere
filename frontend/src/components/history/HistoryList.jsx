@@ -2,7 +2,7 @@ import React from 'react';
 import HistoryListItem from './HistoryListItem';
 const HistoryList = () => {
     return (
-        <div className='flex justify-center'>
+        <div className='flex justify-center' >
             <div className='flex flex-col gap-3'>
                 <div>
                     <HistoryListItem type={"출고"}/>
