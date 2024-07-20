@@ -19,7 +19,6 @@ function App() {
 						<Route path="/inventory" />
 						<Route path="/incoming" />
 						<Route path="/outgoing" />
-						<Route path="/setting" />
 					</Route>
 					<Route path="/" element={<LoginChoice />} h />
 				</Routes>

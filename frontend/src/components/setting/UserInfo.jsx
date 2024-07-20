@@ -1,7 +1,12 @@
 import React from "react";
 import { ReactComponent as RightArrow } from "../../assets/setting/right-arrow-icon.svg";
+import { useNavigate } from "react-router-dom";
 
 const UserInfo = () => {
+	const navigate = useNavigate();
+	const onClick = () => {
+		navigate("/setting/info");
+	};
 	return (
 		<>
 			<div className="flex px-2 items-center relative w-full h-[123px] bg-white rounded-[10px] border border-solid border-[#d9d9d9]">
@@ -13,7 +18,11 @@ const UserInfo = () => {
 								스파로스
 							</div>
 							<div>
-								<RightArrow />
+								<RightArrow
+									onClick={() => {
+										onClick();
+									}}
+								/>
 							</div>
 						</div>
 						<div className="flex items-center justify-start ">
