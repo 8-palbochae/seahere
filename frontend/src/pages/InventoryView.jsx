@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import SearchInput from '../components/common/SearchInput';
-import IventoryList from '../components/iventory/IventoryList';
+import InventoryList from '../components/inventory/InventoryList';
 
-const IventoryView = () => {
+const InventoryView = () => {
     
 
   return (
     <div className="w-full">
-        <IventoryList/>
+        <SearchInput/>
+        <InventoryList/>
        {/* <div className="flex justify-around items-center border-b border-gray-300 p-2 mx-1">
             <div className="flex-1 font-bold">어종</div>
             <div className="flex-1 font-bold">분류</div>
@@ -19,4 +20,4 @@ const IventoryView = () => {
     );
 };
 
-export default IventoryView;
+export default InventoryView;
