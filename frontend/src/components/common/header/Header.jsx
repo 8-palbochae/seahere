@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as Bell } from "../../../assets/header/bell.svg";
+import { ReactComponent as Bell } from "../../../assets/header/bell-icon.svg";
 
 export const Header = () => {
 	return (

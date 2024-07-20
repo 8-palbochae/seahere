@@ -4,11 +4,10 @@ import bottomIcon from "../../../constants/bottom/bottom.image";
 import { useNavigate } from "react-router-dom";
 
 const Bottom = () => {
-	const navigate = useNavigate();
+	const navigae = useNavigate();
 	const onClick = (page) => {
-		navigate(page);
+		navigae(page);
 	};
-
 	return (
 		<div className="flex flex-row justify-between w-full bottom-0 border-t py-1 border-gray-300 bg-white mb-2">
 			<div
@@ -26,11 +25,9 @@ const Bottom = () => {
 				</span>
 			</div>
 			<div
-				onClick={() => {
-					onClick("/");
-				}}
 				aria-label="거래 내역"
 				className="flex flex-col items-center text-gray-600 hover:text-gray-500 flex-1 text-center py-2"
+				onClick={() => onClick("history")}
 			>
 				<img
 					src={bottomIcon.historyIcon}
@@ -42,9 +39,9 @@ const Bottom = () => {
 				</span>
 			</div>
 			<div
-				onClick={() => onClick("/")}
 				aria-label="재고 내역"
 				className="flex flex-col items-center text-gray-600 hover:text-gray-500 flex-1 text-center py-2"
+				onClick={() => onClick("/")}
 			>
 				<img
 					src={bottomIcon.iventoryIcon}
@@ -56,6 +53,7 @@ const Bottom = () => {
 				</span>
 			</div>
 			<div
+				aria-label="설정"
 				className="flex flex-col items-center text-gray-600 hover:text-gray-500 flex-1 text-center py-2"
 				onClick={() => onClick("setting")}
 			>
