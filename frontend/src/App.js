@@ -21,7 +21,6 @@ function App() {
 						<Route path="/inventory" element={<InventoryView/>} />
 						<Route path="/incoming" element={<Income/>}/>
 						<Route path="/outgoing" />
-						<Route path="/setting" />
 					</Route>
 					<Route path="/" element={<LoginChoice />} h />
 				</Routes>
