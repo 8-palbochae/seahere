@@ -6,7 +6,7 @@ import Layout from "./pages/layout/Layout";
 import Setting from "./pages/Setting";
 import Main from "./pages/Main";
 import History from "./pages/History";
-import IventoryView from './pages/IventoryView';
+import InventoryView from './pages/InventoryView';
 import Income from './pages/Income';
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
 						<Route path="/setting" element={<Setting />} />
 						<Route path="/main" element={<Main />} />
 						<Route path="/history" element={<History />} />
-						<Route path="/inventory" element={<IventoryView/>} />
+						<Route path="/inventory" element={<InventoryView/>} />
 						<Route path="/incoming" element={<Income/>}/>
 						<Route path="/outgoing" />
 					</Route>
