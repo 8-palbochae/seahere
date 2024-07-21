@@ -4,9 +4,9 @@ import bottomIcon from "../../../constants/bottom/bottom.image";
 import { useNavigate } from "react-router-dom";
 
 const Bottom = () => {
-	const navigae = useNavigate();
+	const navigate = useNavigate();
 	const onClick = (page) => {
-		navigae(page);
+		navigate(page);
 	};
 	return (
 		<div className="flex flex-row justify-between w-full bottom-0 border-t  border-gray-300 bg-white">
