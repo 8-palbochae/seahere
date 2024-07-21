@@ -21,7 +21,6 @@
 
 .buttons {
   height: 100%;
-  width: 33%;
   position: absolute;
   right: 0;
   transform: translateY(-50%);
