@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import dayjs from 'dayjs';
 import useDragHandler from '../../hooks/useDragHandler';
-import '../inventory/InventoryItem.css';
-import InventoryItemDetails from '../inventory/IventoryItemDetails';
+import '../inventory/styles/InventoryItem.css';
+import InventoryItemDetails from '../inventory/InventoryItemDetails';
 
 const OutgoingListItem = () => {
     const [isSwiped, setIsSwiped] = useState(false);
