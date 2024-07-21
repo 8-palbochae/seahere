@@ -17,7 +17,7 @@ const QrItem = ({ qrCode, onClick }) => {
 				</div>
 			</div>
 			<div className="bg-white rounded-[20px] p-2">
-				<img src={qrCode} />
+				<img src={qrCode} alt="qrcode" />
 			</div>
 		</div>
 	);
