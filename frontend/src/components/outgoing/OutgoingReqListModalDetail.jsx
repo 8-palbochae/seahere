@@ -20,10 +20,10 @@ const OutgoingReqListModalDetail = () => {
     );
 
     return (
-        <div className="relative w-full h-[98px] flex">
+        <div className="relative w-full max-w-[600px] bg-blue-300 rounded-[10px] shadow-lg px-4 py-4 overflow-hidden">
             <div
                 ref={itemRef}
-                className={`w-full h-full bg-blue-300 rounded-[10px] shadow-lg px-4 py-4 flex items-center transition-transform duration-300 ease-in-out ${
+                className={`flex items-center justify-start w-full transition-transform duration-300 ease-in-out ${
                     isSwiped ? 'translate-x-[-100px]' : 'translate-x-0'
                 }`}
                 onTouchStart={handleTouchStart}
@@ -32,13 +32,9 @@ const OutgoingReqListModalDetail = () => {
                 onMouseDown={handleMouseDown}
             >
                 {/* Item 1: 넙치 및 이미지 */}
-                <div className="relative flex items-center mr-4">
-                    <img
-                        className="w-[60px] h-[60px] object-cover"
-                        alt="Image"
-                        src={nupchiIcon}
-                    />
-                    <div className="absolute top-1/2 left-0 right-0 transform -translate-y-1/2 text-center text-black font-normal text-base rounded-md px-2 py-1 bg-white bg-opacity-100">
+                <div className="relative flex items-center mr-2"> {/* 왼쪽으로 이동 */}
+                    <img className="w-[60px] h-[60px] object-cover relative bottom-4" alt="Image" src={nupchiIcon} />
+                    <div className="absolute top-[60%] left-0 right-0 text-center text-black font-normal text-base rounded-md px-2 py-1 bg-white bg-opacity-100">
                         넙치
                     </div>
                 </div>
@@ -68,7 +64,7 @@ const OutgoingReqListModalDetail = () => {
             {/* 삭제 버튼 */}
             {isSwiped && (
                 <button
-                    className="absolute right-0 top-0 h-full bg-red-600 text-white py-2 px-4 rounded-l-lg shadow-lg flex items-center justify-center z-10"
+                    className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-red-500 text-white px-4 py-9 rounded-md z-10"
                     style={{ width: '100px' }}
                     onClick={() => alert('삭제되었습니다.')}
                 >

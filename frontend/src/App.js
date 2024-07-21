@@ -13,6 +13,7 @@ import MainSetting from "./components/setting/main/MainSetting";
 import OutgoingList from "./pages/OutgoingList";
 import QrInfo from "./components/setting/qrinfo/QrInfo";
 import UserInfoSetting from "./components/setting/userinfo/UserInfoSetting";
+import OutgoingReqList from "./pages/OutgoingReqList";
 
 function App() {
 	return (
@@ -37,6 +38,8 @@ function App() {
 							path="/outgoingList"
 							element={<OutgoingList />}
 						/>
+						<Route path="/outgoingReqList" element={<OutgoingReqList/>} />
+						<Route path="/incomingList" element={<OutgoingReqList />} />
 					</Route>
 					<Route path="/" element={<LoginChoice />} h />
 					<Route path="/signup" element={<SignUpChoice />} />
