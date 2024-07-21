@@ -4,7 +4,7 @@ import UserInfoList from "./UserInfoList";
 
 const UserInfoSetting = () => {
 	return (
-		<div className="flex flex-col items-center gap-9">
+		<div className="flex flex-col items-center gap-9 pt-8">
 			<img
 				src={settingIcon.userInfoImage}
 				className=" w-[150px] h-[150px]  rounded-full"

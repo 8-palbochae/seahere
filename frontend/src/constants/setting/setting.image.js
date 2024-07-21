@@ -6,6 +6,8 @@ import teamIcon from "../../assets/setting/team-icon.svg";
 import qrIcon from "../../assets/setting/scan-icon.svg";
 import logoutIcon from "../../assets/setting/logout-icon.svg";
 import userInfoImage from "../../assets/setting/user-info-mock-image.jpg";
+import qrCode from "../../assets/setting/qrcode.png";
+import moreIcon from "../../assets/setting/more-icon.svg";
 
 const settingIcon = {
 	alarmHistoryIcon,
@@ -16,6 +18,8 @@ const settingIcon = {
 	qrIcon,
 	teamIcon,
 	userInfoImage,
+	qrCode,
+	moreIcon,
 };
 
 export default settingIcon;

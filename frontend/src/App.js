@@ -9,8 +9,10 @@ import History from "./pages/History";
 import InventoryView from "./pages/InventoryView";
 import Income from "./pages/Income";
 import SignUpChoice from "./pages/SignUpChoice";
-import UserInfoSetting from "./components/setting/info/UserInfoSetting";
+
 import MainSetting from "./components/setting/main/MainSetting";
+import QrInfo from "./components/setting/qrinfo/QrInfo";
+import UserInfoSetting from "./components/setting/userinfo/UserInfoSetting";
 
 function App() {
 	return (
@@ -24,6 +26,7 @@ function App() {
 								path="user-info"
 								element={<UserInfoSetting />}
 							/>
+							<Route path="qr-info" element={<QrInfo />} />
 						</Route>
 						<Route path="/main" element={<Main />} />
 						<Route path="/history" element={<History />} />
