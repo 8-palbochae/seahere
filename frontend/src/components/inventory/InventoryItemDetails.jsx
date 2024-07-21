@@ -1,9 +1,26 @@
-import React from 'react';
-import { iventoryIcon } from '../../constants/iventory/iventory.image';
+import React, { useState } from 'react';
 import useInventorySlide from '../../hooks/inventory/useInventorySlide';
+import { iventoryIcon } from '../../constants/iventory/iventory.image';
+import InventoryEditModal from './InventoryEditModal';
+import InventoryDeleteModal from './InventoryDeleteModal';
+
 
 const InventoryItemDetails = () => {
     const { isSlid, handleTouchStart, handleTouchMove, handleMouseDown, handleMouseMove } = useInventorySlide();
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isDeleteConfirmOpen, setIsDeleteConfirmOpen] = useState(false);
+
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
+
+    const openDeleteConfirm = () => setIsDeleteConfirmOpen(true);
+    const closeDeleteConfirm = () => setIsDeleteConfirmOpen(false);
+
+    const handleDelete = () => {
+        // Perform the delete action here
+        console.log("Item deleted");
+        closeDeleteConfirm();
+    };
 
     return (
         <div
@@ -35,14 +52,24 @@ const InventoryItemDetails = () => {
                     className={`absolute top-0 right-0 h-full flex flex-row bg-white border-l border-gray-200 transition-transform duration-300 ${isSlid ? 'translate-x-0' : 'translate-x-full'}`}
                     style={{ width: '140px' }} // Width of the buttons container
                 >
-                    <button className="flex-1 flex items-center justify-center p-0 bg-gray-400">
+                    <button className="flex-1 flex items-center justify-center p-0 bg-gray-400" onClick={openModal}>
                         <img src={iventoryIcon.editIcon} className='w-3/5 h-3/5 object-contain' alt="Edit" />
                     </button>
-                    <button className="flex-1 flex items-center justify-center p-0 bg-red-500">
+                    <button className="flex-1 flex items-center justify-center p-0 bg-red-500" onClick={openDeleteConfirm}>
                         <img src={iventoryIcon.deleteIcon} className='w-3/5 h-3/5 object-contain' alt="Delete" />
                     </button>
                 </div>
             </div>
+
+            {/* Modal Component */}
+            <InventoryEditModal isOpen={isModalOpen} onClose={closeModal} />
+
+            {/* Delete Confirmation Dialog */}
+            <InventoryDeleteModal
+                isOpen={isDeleteConfirmOpen}
+                onClose={closeDeleteConfirm}
+                onConfirm={handleDelete}
+            />
         </div>
     );
 };
