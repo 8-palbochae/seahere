@@ -13,6 +13,7 @@ import MainSetting from "./components/setting/main/MainSetting";
 import OutgoingList from "./pages/OutgoingList";
 import QrInfo from "./components/setting/qrinfo/QrInfo";
 import UserInfoSetting from "./components/setting/userinfo/UserInfoSetting";
+import PasswordChange from "./components/setting/userinfo/password_change/PasswordChange";
 
 function App() {
 	return (
@@ -27,6 +28,10 @@ function App() {
 								element={<UserInfoSetting />}
 							/>
 							<Route path="qr-info" element={<QrInfo />} />
+							<Route
+								path="password-change"
+								element={<PasswordChange />}
+							/>
 						</Route>
 						<Route path="/main" element={<Main />} />
 						<Route path="/history" element={<History />} />
