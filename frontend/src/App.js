@@ -14,6 +14,7 @@ import OutgoingList from "./pages/OutgoingList";
 import QrInfo from "./components/setting/qrinfo/QrInfo";
 import UserInfoSetting from "./components/setting/userinfo/UserInfoSetting";
 import PasswordChange from "./components/setting/userinfo/password_change/PasswordChange";
+import TeamInfo from "./components/setting/teaminfo/TeamInfo";
 
 function App() {
 	return (
@@ -32,6 +33,7 @@ function App() {
 								path="password-change"
 								element={<PasswordChange />}
 							/>
+							<Route path="team-info" element={<TeamInfo />} />
 						</Route>
 						<Route path="/main" element={<Main />} />
 						<Route path="/history" element={<History />} />
