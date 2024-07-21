@@ -1,11 +1,14 @@
 import React from 'react';
-import {ReactComponent as Outgoing} from "../../assets/navigator/outgoing-icon.svg"
-import {ReactComponent as Incoming} from "../../assets/navigator/incoming-icon.svg"
-import {ReactComponent as Adjust} from "../../assets/navigator/adjust-icon.svg"
+import {ReactComponent as Outgoing} from "../../assets/history/outgoing-icon.svg"
+import {ReactComponent as Incoming} from "../../assets/history/incoming-icon.svg"
+import {ReactComponent as Adjust} from "../../assets/history/adjust-icon.svg"
+import useHistoryHandler from '../../hooks/History/historyHandler';
 
 
 const HistoryListItem = ({type}) => {
 
+    const {handleNavigation} = useHistoryHandler();
+    
   // 아이콘 매핑 객체
   const iconMap = {
     출고: <Outgoing className="w-7 h-7" style={{ marginLeft: '20px', marginTop:'2px'}} />,
@@ -18,7 +21,7 @@ const icon = iconMap[type];
     return (
         
             <div className="flex flex-col justify-center w-full">
-                <div className="relative w-[376px] h-[159px] bg-blue-300 rounded-[20px] border-2 border-gray-300">
+                <div className="relative w-[376px] h-[159px] bg-blue-300 rounded-[20px] border-2 border-gray-300" onClick={() => handleNavigation(type)}>
                 <div className="flex flex-col">
                   <div className="absolute w-[196px] h-8 top-[7px] left-2 bg-white rounded-[20px]">
                   {icon}

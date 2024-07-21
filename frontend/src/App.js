@@ -11,6 +11,7 @@ import Income from "./pages/Income";
 import SignUpChoice from "./pages/SignUpChoice";
 import UserInfoSetting from "./components/setting/info/UserInfoSetting";
 import MainSetting from "./components/setting/main/MainSetting";
+import OutgoingList from "./pages/OutgoingList";
 
 function App() {
 	return (
@@ -30,6 +31,7 @@ function App() {
 						<Route path="/inventory" element={<InventoryView />} />
 						<Route path="/incoming" element={<Income />} />
 						<Route path="/outgoing" />
+						<Route path="/outgoingList" element={<OutgoingList/>} />
 					</Route>
 					<Route path="/" element={<LoginChoice />} h />
 					<Route path="/signup" element={<SignUpChoice />} />
