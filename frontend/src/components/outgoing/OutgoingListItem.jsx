@@ -5,9 +5,20 @@ import '../inventory/InventoryItem.css';
 import InventoryItemDetails from '../inventory/IventoryItemDetails';
 
 const OutgoingListItem = () => {
-    const { itemRef, handleTouchStart, handleTouchMove, handleTouchEnd, handleMouseDown, isSwiped } = useDragHandler(
-        () => console.log('Swiped left'),
-        () => console.log('Swiped right')
+    const [isSwiped, setIsSwiped] = useState(false);
+
+    // 핸들러 함수들
+    const handleSwipeLeft = () => {
+        setIsSwiped(true);
+    };
+
+    const handleSwipeRight = () => {
+        setIsSwiped(false);
+    };
+
+    const { itemRef, handleTouchStart, handleTouchMove, handleTouchEnd, handleMouseDown } = useDragHandler(
+        handleSwipeLeft,
+        handleSwipeRight
     );
 
     const [isExpanded, setIsExpanded] = useState(false);
@@ -53,9 +64,9 @@ const OutgoingListItem = () => {
                 <button
                     className={`absolute right-0 h-[98px] bg-blue-600 text-white py-2 px-4 rounded-r-lg shadow-lg flex items-center justify-center transition-width duration-300 ease-in-out ${isSwiped ? 'block' : 'hidden'}`}
                     style={{ width: '100px' }}
-                    onClick={() => alert('출고 완료 되었습니다.')}
+                    onClick={() => alert('삭제되었습니다.')}
                 >
-                    출고 완료
+                    삭제
                 </button>
             </div>
             <div

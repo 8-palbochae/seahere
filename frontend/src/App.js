@@ -15,7 +15,7 @@ import QrInfo from "./components/setting/qrinfo/QrInfo";
 import UserInfoSetting from "./components/setting/userinfo/UserInfoSetting";
 import PasswordChange from "./components/setting/userinfo/password_change/PasswordChange";
 import TeamInfo from "./components/setting/teaminfo/TeamInfo";
-
+import OutgoingReqList from "./pages/OutgoingReqList"
 function App() {
 	return (
 		<div className="flex justify-center items-center bg-gray-100 jsu">
@@ -44,8 +44,9 @@ function App() {
 							path="/outgoingList"
 							element={<OutgoingList />}
 						/>
+						<Route path="/outgoingReqList" element={<OutgoingReqList />} />
 					</Route>
-					<Route path="/" element={<LoginChoice />} h />
+					<Route path="/" element={<LoginChoice />} />
 					<Route path="/signup" element={<SignUpChoice />} />
 				</Routes>
 			</BrowserRouter>
