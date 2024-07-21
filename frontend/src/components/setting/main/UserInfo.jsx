@@ -1,11 +1,11 @@
 import React from "react";
-import { ReactComponent as RightArrow } from "../../assets/setting/right-arrow-icon.svg";
+import { ReactComponent as RightArrow } from "../../../assets/setting/right-arrow-icon.svg";
 import { useNavigate } from "react-router-dom";
 
 const UserInfo = () => {
 	const navigate = useNavigate();
 	const onClick = () => {
-		navigate("/setting/info");
+		navigate("/setting/user-info");
 	};
 	return (
 		<>

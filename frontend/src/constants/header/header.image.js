@@ -1,4 +1,4 @@
-import bellIcon from "../../assets/header/bell.svg";
+import bellIcon from "../../assets/header/bell-icon.svg";
 const headerIcon = {
 	bellIcon,
 };
