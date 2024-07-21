@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import QrItem from "./QrItem";
 import settingIcon from "../../../constants/setting/setting.image";
-import { Button, Modal } from "antd";
+import { Modal } from "antd";
 
 const QrList = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false);

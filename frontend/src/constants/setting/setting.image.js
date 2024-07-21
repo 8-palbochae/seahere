@@ -8,6 +8,8 @@ import logoutIcon from "../../assets/setting/logout-icon.svg";
 import userInfoImage from "../../assets/setting/user-info-mock-image.jpg";
 import qrCode from "../../assets/setting/qrcode.png";
 import moreIcon from "../../assets/setting/more-icon.svg";
+import cameraIcon from "../../assets/setting/camera-icon.svg";
+import addIcon from "../../assets/setting/add-icon.svg";
 
 const settingIcon = {
 	alarmHistoryIcon,
@@ -20,6 +22,8 @@ const settingIcon = {
 	userInfoImage,
 	qrCode,
 	moreIcon,
+	cameraIcon,
+	addIcon,
 };
 
 export default settingIcon;

@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import MainLogo from "../assets/common/MainLogo.svg";
-import background from "../assets/common/background.svg";
+import MainImage from "../constants/main/main.image";
 
 const SignUpTemplate = () => {
 	return (
@@ -9,13 +8,13 @@ const SignUpTemplate = () => {
 				<div className="absolute w-[390px] h-[423px] top-[436px] left-1">
 					<img
 						className="w-[390px] h-[390px] top-[33px] left-0 absolute object-cover"
-						src={background}
+						src={MainImage.background}
 					/>
 				</div>
 				<div className="absolute top-[180px] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
 					<img
 						className="w-80 h-80 object-cover"
-						src={MainLogo}
+						src={MainImage.mainLogo}
 						alt="Main Logo"
 					/>
 				</div>
