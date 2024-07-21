@@ -5,6 +5,7 @@ import inventoryIcon from "../../assets/setting/inventory-icon.svg";
 import teamIcon from "../../assets/setting/team-icon.svg";
 import qrIcon from "../../assets/setting/scan-icon.svg";
 import logoutIcon from "../../assets/setting/logout-icon.svg";
+import userInfoImage from "../../assets/setting/user-info-mock-image.jpg";
 
 const settingIcon = {
 	alarmHistoryIcon,
@@ -14,6 +15,7 @@ const settingIcon = {
 	logoutIcon,
 	qrIcon,
 	teamIcon,
+	userInfoImage,
 };
 
 export default settingIcon;
