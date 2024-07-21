@@ -16,6 +16,7 @@ import UserInfoSetting from "./components/setting/userinfo/UserInfoSetting";
 import PasswordChange from "./components/setting/userinfo/password_change/PasswordChange";
 import TeamInfo from "./components/setting/teaminfo/TeamInfo";
 import OutgoingReqList from "./pages/OutgoingReqList"
+import Trade from './pages/Trade';
 function App() {
 	return (
 		<div className="flex justify-center items-center bg-gray-100 jsu">
@@ -38,6 +39,7 @@ function App() {
 						<Route path="/main" element={<Main />} />
 						<Route path="/history" element={<History />} />
 						<Route path="/inventory" element={<InventoryView />} />
+						<Route path="/trade" element={<Trade />} />
 						<Route path="/incoming" element={<Income />} />
 						<Route path="/outgoing" />
 						<Route
