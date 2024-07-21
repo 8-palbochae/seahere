@@ -1,5 +1,4 @@
 import React from "react";
-import "./Bottom.css";
 import bottomIcon from "../../../constants/bottom/bottom.image";
 import { useNavigate } from "react-router-dom";
 

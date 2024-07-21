@@ -15,6 +15,7 @@ import QrInfo from "./components/setting/qrinfo/QrInfo";
 import UserInfoSetting from "./components/setting/userinfo/UserInfoSetting";
 import PasswordChange from "./components/setting/userinfo/password_change/PasswordChange";
 import TeamInfo from "./components/setting/teaminfo/TeamInfo";
+import InventorySetting from "./components/setting/inventoryinfo/InventorySetting";
 
 function App() {
 	return (
@@ -24,16 +25,17 @@ function App() {
 					<Route element={<Layout />}>
 						<Route path="/setting" element={<Setting />}>
 							<Route path="" element={<MainSetting />} />
-							<Route
-								path="user-info"
-								element={<UserInfoSetting />}
-							/>
-							<Route path="qr-info" element={<QrInfo />} />
+							<Route path="user" element={<UserInfoSetting />} />
+							<Route path="qr" element={<QrInfo />} />
 							<Route
 								path="password-change"
 								element={<PasswordChange />}
 							/>
-							<Route path="team-info" element={<TeamInfo />} />
+							<Route path="team" element={<TeamInfo />} />
+							<Route
+								path="inventory"
+								element={<InventorySetting />}
+							/>
 						</Route>
 						<Route path="/main" element={<Main />} />
 						<Route path="/history" element={<History />} />
