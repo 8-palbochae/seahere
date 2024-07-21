@@ -8,8 +8,10 @@ import Main from "./pages/Main";
 import History from "./pages/History";
 import IventoryView from './pages/IventoryView';
 import Income from './pages/Income';
-import SignUpChoice from './pages/SignUpChoice';
-import SignUpInfo from "./pages/SignUpInfo";
+import SignUpChoice from './pages/loginSignup/SignUpChoice';
+import SignUpInfo from "./pages/loginSignup/SignUpInfo";
+import SignUpBroker from "./pages/loginSignup/SignUpBroker";
+import SignUpBrokerChoice from "./pages/loginSignup/SignUpBrokerChoice";
 
 function App() {
 	return (
@@ -26,8 +28,9 @@ function App() {
 						<Route path="/setting" />
 					</Route>
 					<Route path="/" element={<LoginChoice />} h />
-					<Route path="/signup" element={<SignUpChoice/>}/>
-					<Route path="/business-signup" element={<SignUpChoice/>}/>
+					<Route path="/signup-choice" element={<SignUpChoice/>}/>
+					<Route path="/signup-B-choice" element={<SignUpBrokerChoice/>}/>
+					<Route path="/signup-B-info" element={<SignUpBroker/>}/>
 					<Route path="/signup-info" element={<SignUpInfo/>}/>
 				</Routes>
 			</BrowserRouter>

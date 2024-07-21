@@ -38,11 +38,11 @@ const LoginChoice = () => {
             </div>
             <div className="absolute w-[222px] h-5 top-32 left-[19px]">
               <div className="absolute w-[220px] top-0 left-0 [font-family:'Inter-Regular',Helvetica] font-normal text-black text-[15px] text-center tracking-[0] leading-[15px]">
-                <Link to={"/signup"}>email로 시작하기</Link>
+                <Link to={"/signup-choice"}>email로 시작하기</Link>
               </div>
             </div>
           </div>
-          <div className="absolute w-[276px] h-[207px] top-0 left-[62px]">
+          <form className="absolute w-[276px] h-[207px] top-0 left-[62px]">
             <div className="top-0 absolute w-[273px] h-[52px] left-0.5">
               <div className="relative w-[271px] h-[52px] bg-white rounded-[10px] border border-solid border-black">
                 <div className="relative w-[271px] h-[52px]">
@@ -60,7 +60,7 @@ const LoginChoice = () => {
                 <div className="relative w-[271px] h-[52px]">
                   <input
                     type="password"
-                    name="email"
+                    name="password"
                     className="absolute inset-0 w-full h-full bg-white border-none rounded-[10px] px-3 py-2 text-[#00000033] text-xs leading-[normal] [font-family:'Inter-Regular',Helvetica] font-normal tracking-[0]"
                     placeholder="비밀번호"
                   />
@@ -68,16 +68,16 @@ const LoginChoice = () => {
               </div>
             </div>
             <div className="absolute w-[276px] h-[49px] top-[132px] left-0">
-              <div className="relative w-[271px] h-[52px] bg-blue-600 rounded-[10px] border border-solid border-black">
+              <button type="submit" className="relative w-[271px] h-[52px] bg-blue-600 rounded-[10px] border border-solid border-black">
                 <div className="w-[195px] h-[25px] top-3 left-10 text-white text-base text-center leading-[normal] absolute [font-family:'Inter-Regular',Helvetica] font-normal tracking-[0]">
                   시작하기
                 </div>
-              </div>
+              </button>
             </div>
             <div className="w-[165px] h-[18px] top-[189px] left-[55px] text-black text-base text-center leading-[normal] whitespace-nowrap absolute [font-family:'Inter-Regular',Helvetica] font-normal tracking-[0]">
               아이디/비밀번호 재발급
             </div>
-          </div>
+          </form>
         </div>
         <img
           className="absolute w-80 h-80 top-[52px] left-[35px] object-cover"

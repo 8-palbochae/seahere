@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import MainLogo from '../assets/common/MainLogo.svg';
-import background from '../assets/common/background.svg';
-import back from '../assets/loginSignup/backbutton.svg';
+import MainLogo from '../../assets/common/MainLogo.svg';
+import background from '../../assets/common/background.svg';
+import back from '../../assets/loginSignup/backbutton.svg';
 
 const SignUpChoice = () => {
   return (
@@ -12,7 +12,7 @@ const SignUpChoice = () => {
           src={background}
         />
         <div className="absolute w-full h-full top-0 flex flex-col items-center space-y-6 mt-4">
-          <Link to="/business-signup">
+          <Link to="/signup-B-choice">
             <div className="flex items-center justify-center w-[316px] h-[160px] bg-[#fffffff2] rounded-[25px] border border-solid border-[#d9d9d9]">
               <div className="[font-family: 'inter-Regular', Helvetica] font-normal text-black text-center tracking-[0] leading-[30px] whitespace-nowrap">
                 사업자로 가입
