@@ -25,7 +25,7 @@ const SettingList = () => {
 					svg={settingIcon.inventoryIcon}
 				/>
 			</div>
-			<div onClick={() => onClick("")}>
+			<div onClick={() => onClick("/setting/team-info")}>
 				<SettingItem type={"팀 설정"} svg={settingIcon.teamIcon} />
 			</div>
 			<div onClick={() => onClick("/setting/qr-info")}>

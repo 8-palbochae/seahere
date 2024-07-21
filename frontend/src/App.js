@@ -13,8 +13,9 @@ import MainSetting from "./components/setting/main/MainSetting";
 import OutgoingList from "./pages/OutgoingList";
 import QrInfo from "./components/setting/qrinfo/QrInfo";
 import UserInfoSetting from "./components/setting/userinfo/UserInfoSetting";
-import OutgoingReqList from "./pages/OutgoingReqList";
-
+import PasswordChange from "./components/setting/userinfo/password_change/PasswordChange";
+import TeamInfo from "./components/setting/teaminfo/TeamInfo";
+import OutgoingReqList from "./pages/OutgoingReqList"
 function App() {
 	return (
 		<div className="flex justify-center items-center bg-gray-100 jsu">
@@ -28,6 +29,11 @@ function App() {
 								element={<UserInfoSetting />}
 							/>
 							<Route path="qr-info" element={<QrInfo />} />
+							<Route
+								path="password-change"
+								element={<PasswordChange />}
+							/>
+							<Route path="team-info" element={<TeamInfo />} />
 						</Route>
 						<Route path="/main" element={<Main />} />
 						<Route path="/history" element={<History />} />
@@ -38,10 +44,9 @@ function App() {
 							path="/outgoingList"
 							element={<OutgoingList />}
 						/>
-						<Route path="/outgoingReqList" element={<OutgoingReqList/>} />
-						<Route path="/incomingList" element={<OutgoingReqList />} />
+						<Route path="/outgoingReqList" element={<OutgoingReqList />} />
 					</Route>
-					<Route path="/" element={<LoginChoice />} h />
+					<Route path="/" element={<LoginChoice />} />
 					<Route path="/signup" element={<SignUpChoice />} />
 				</Routes>
 			</BrowserRouter>
