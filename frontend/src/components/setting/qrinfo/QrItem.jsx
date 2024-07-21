@@ -2,7 +2,7 @@ import React from "react";
 import { Checkbox } from "antd";
 import settingIcon from "../../../constants/setting/setting.image";
 
-const QrItem = ({ qrCode }) => {
+const QrItem = ({ qrCode, onClick }) => {
 	return (
 		<div className="flex flex-col bg-[#2536eb] rounded-[20px] p-2 gap-3">
 			<div className="flex items-center gap-4">
@@ -12,7 +12,7 @@ const QrItem = ({ qrCode }) => {
 				<div>
 					<Checkbox />
 				</div>
-				<div className="flex-grow flex justify-end">
+				<div className="flex-grow flex justify-end" onClick={onClick}>
 					<img src={settingIcon.moreIcon} alt="more-icon" />
 				</div>
 			</div>
