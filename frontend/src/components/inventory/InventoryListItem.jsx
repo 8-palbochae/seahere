@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import dayjs from 'dayjs';
 import productImg from '../../assets/income/product.svg';
-import './InventoryItem.css';
-import { Link } from 'react-router-dom';
-import InventoryItemDetails from './IventoryItemDetails';
+import './styles/InventoryItem.css';
+import InventoryItemDetails from './InventoryItemDetails';
 
 const InventoryItem = () => {
     const [isExpanded, setIsExpanded] = useState(false);

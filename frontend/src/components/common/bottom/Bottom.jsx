@@ -41,7 +41,7 @@ const Bottom = () => {
 			<div
 				aria-label="재고 내역"
 				className="flex flex-col items-center text-gray-600 hover:text-gray-500 flex-1 text-center py-2"
-				onClick={() => onClick("/")}
+				onClick={() => onClick("/inventory")}
 			>
 				<img
 					src={bottomIcon.iventoryIcon}
