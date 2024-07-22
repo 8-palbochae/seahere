@@ -24,6 +24,7 @@ import OutgoingReqList from "./pages/OutgoingReqList";
 import Alarm from "./components/setting/alarm/Alarm";
 import IncomingList from "./pages/IncomingList";
 import AdjustList from "./pages/AdjustList";
+import AlarmHistory from "./components/common/header/AlarmHistory";
 function App() {
 	return (
 		<div className="flex justify-center items-center bg-gray-100 jsu">
@@ -34,6 +35,10 @@ function App() {
 							<Route path="" element={<MainSetting />} />
 							<Route path="user" element={<UserInfoSetting />} />
 							<Route path="qr" element={<QrInfo />} />
+							<Route
+								path="alarm-history"
+								element={<AlarmHistory />}
+							/>
 							<Route
 								path="password-change"
 								element={<PasswordChange />}
@@ -50,15 +55,30 @@ function App() {
 						<Route path="/inventory" element={<InventoryView />} />
 						<Route path="/incoming" element={<Income />} />
 						<Route path="/outgoing" />
-						<Route path="/outgoingList" element={<OutgoingList />}/>
-						<Route path="/outgoingReqList" element={<OutgoingReqList />}/>
-						<Route path="/incomingList" element={<IncomingList />} />
+						<Route
+							path="/outgoingList"
+							element={<OutgoingList />}
+						/>
+						<Route
+							path="/outgoingReqList"
+							element={<OutgoingReqList />}
+						/>
+						<Route
+							path="/incomingList"
+							element={<IncomingList />}
+						/>
 						<Route path="/adjustList" element={<AdjustList />} />
-						
+						<Route
+							path="/alarm-history"
+							element={<AlarmHistory />}
+						/>
 					</Route>
 					<Route path="/" element={<LoginChoice />} h />
 					<Route path="/signup-choice" element={<SignUpChoice />} />
-					<Route path="/signup-B-choice" element={<SignUpBrokerChoice />} />
+					<Route
+						path="/signup-B-choice"
+						element={<SignUpBrokerChoice />}
+					/>
 					<Route path="/signup-B-info" element={<SignUpBroker />} />
 					<Route path="/signup-info" element={<SignUpInfo />} />
 				</Routes>
