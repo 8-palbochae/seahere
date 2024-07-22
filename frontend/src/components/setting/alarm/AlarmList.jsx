@@ -1,6 +1,5 @@
 import React from "react";
 import AlarmListItem from "./AlarmListItem";
-import { Checkbox } from "antd";
 
 const AlarmList = () => {
 	return (
