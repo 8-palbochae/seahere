@@ -10,7 +10,7 @@ const SettingList = () => {
 	};
 	return (
 		<div className="flex flex-col  w-full h-full">
-			<div onClick={() => onClick("")}>
+			<div onClick={() => onClick("/setting/alarm")}>
 				<SettingItem type={"알람 보내기"} svg={settingIcon.sendIcon} />
 			</div>
 			<div onClick={() => onClick("")}>
