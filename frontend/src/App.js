@@ -22,6 +22,7 @@ import InventorySetting from "./components/setting/inventoryinfo/InventorySettin
 
 import OutgoingReqList from "./pages/OutgoingReqList";
 import Alarm from "./components/setting/alarm/Alarm";
+import IncomingList from "./pages/IncomingList";
 function App() {
 	return (
 		<div className="flex justify-center items-center bg-gray-100 jsu">
@@ -48,14 +49,10 @@ function App() {
 						<Route path="/inventory" element={<InventoryView />} />
 						<Route path="/incoming" element={<Income />} />
 						<Route path="/outgoing" />
-						<Route
-							path="/outgoingList"
-							element={<OutgoingList />}
-						/>
-						<Route
-							path="/outgoingReqList"
-							element={<OutgoingReqList />}
-						/>
+						<Route path="/outgoingList" element={<OutgoingList />}/>
+						<Route path="/outgoingReqList" element={<OutgoingReqList />}/>
+						<Route path="/incomingList" element={<IncomingList />} />
+						
 					</Route>
 					<Route path="/" element={<LoginChoice />} h />
 					<Route path="/signup-choice" element={<SignUpChoice />} />
