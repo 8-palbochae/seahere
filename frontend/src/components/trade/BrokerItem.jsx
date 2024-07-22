@@ -1,16 +1,26 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
 import { tradeIcon } from '../../constants/trade/trade.image';
 
-const BrokerItem = () => {
+const BrokerItem = ({ id }) => { // Accept `id` as a prop
     const [isLike, setIsLike] = useState(false);
+    const navigate = useNavigate(); // Create navigate instance
 
-    const handleLikeClick = () => {
+    const handleLikeClick = (e) => {
+        e.stopPropagation(); // Prevent the like button click from triggering the item click
         setIsLike(!isLike);
     }
 
+    const handleBrokerClick = () => {
+        navigate(`/broker/${id}`); // Navigate to the broker detail page with ID
+    }
+
     return (
-        <div className='relative flex flex-row w-11/12 max-w-md mx-3 items-start bg-white border border-gray-200 rounded-lg shadow-md p-4'>
+        <div 
+            className='relative w-full flex flex-row mx-3 mb-2 items-start bg-white border border-gray-200 rounded-lg shadow-md p-4 cursor-pointer' 
+            onClick={handleBrokerClick} // Add onClick handler for item click
+        >
             {/* Image Container */}
             <div className='w-20 h-20 flex items-center justify-center mr-4'>
                 <img 
@@ -39,6 +49,8 @@ const BrokerItem = () => {
     );
 };
 
-BrokerItem.propTypes = {};
+BrokerItem.propTypes = {
+    id: PropTypes.string.isRequired, // Ensure `id` prop is passed and is a string
+};
 
 export default BrokerItem;

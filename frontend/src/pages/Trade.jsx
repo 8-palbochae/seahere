@@ -7,7 +7,7 @@ import TradeBrokerList from '../components/trade/TradeBrokerList';
 
 const Trade = () => {
     return (
-        <div>
+        <div className='flex flex-col items-center'>
             <BrokerSearchInput/>
             <TradeBrokerList/>
         </div>
