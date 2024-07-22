@@ -13,7 +13,7 @@ const SettingList = () => {
 			<div onClick={() => onClick("")}>
 				<SettingItem type={"알람 보내기"} svg={settingIcon.sendIcon} />
 			</div>
-			<div onClick={() => onClick("")}>
+			<div onClick={() => onClick("/setting/alarm")}>
 				<SettingItem
 					type={"보낸 알람 내역"}
 					svg={settingIcon.alarmHistoryIcon}

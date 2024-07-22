@@ -18,6 +18,7 @@ import TeamInfo from "./components/setting/teaminfo/TeamInfo";
 import InventorySetting from "./components/setting/inventoryinfo/InventorySetting";
 
 import OutgoingReqList from "./pages/OutgoingReqList";
+import Alarm from "./components/setting/alarm/Alarm";
 function App() {
 	return (
 		<div className="flex justify-center items-center bg-gray-100 jsu">
@@ -37,6 +38,7 @@ function App() {
 								path="inventory"
 								element={<InventorySetting />}
 							/>
+							<Route path="alarm" element={<Alarm />} />
 						</Route>
 						<Route path="/main" element={<Main />} />
 						<Route path="/history" element={<History />} />
