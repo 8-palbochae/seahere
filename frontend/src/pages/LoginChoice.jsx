@@ -3,7 +3,9 @@ import MainLogo from '../assets/common/MainLogo.svg';
 import background from '../assets/common/background.svg';
 import naver from '../assets/loginSignup/naver.svg';
 import google from '../assets/loginSignup/google.svg';
-import middleLine from '../assets/loginSignup/middle_Line.svg'
+import middleLine from '../assets/loginSignup/middle_Line.svg';
+import InputField from '../components/loginSignup/InputField'; // 새로 정의한 InputField 컴포넌트를 가져옵니다
+import SubmitButton from '../components/loginSignup/SubmitButton'; // 새로 정의한 SubmitButton 컴포넌트를 가져옵니다
 
 const LoginChoice = () => {
   return (
@@ -44,40 +46,18 @@ const LoginChoice = () => {
           </div>
           <form className="absolute w-[276px] h-[207px] top-0 left-[62px]">
             <div className="top-0 absolute w-[273px] h-[52px] left-0.5">
-              <div className="relative w-[271px] h-[52px] bg-white rounded-[10px] border border-solid border-black">
-                <div className="relative w-[271px] h-[52px]">
-                  <input
-                    type="text"
-                    name="email"
-                    className="absolute inset-0 w-full h-full bg-white border-none rounded-[10px] px-3 py-2 text-[#00000033] text-xs leading-[normal] [font-family:'Inter-Regular',Helvetica] font-normal tracking-[0]"
-                    placeholder="이메일"
-                  />
-                </div>
-              </div>
+              <InputField type="text" name="email" placeholder="이메일" />
             </div>
             <div className="top-[66px] absolute w-[273px] h-[52px] left-0.5">
-              <div className="relative w-[271px] h-[52px] bg-white rounded-[10px] border border-solid border-black">
-                <div className="relative w-[271px] h-[52px]">
-                  <input
-                    type="password"
-                    name="password"
-                    className="absolute inset-0 w-full h-full bg-white border-none rounded-[10px] px-3 py-2 text-[#00000033] text-xs leading-[normal] [font-family:'Inter-Regular',Helvetica] font-normal tracking-[0]"
-                    placeholder="비밀번호"
-                  />
-                </div>
-              </div>
+              <InputField type="password" name="password" placeholder="비밀번호" />
             </div>
             <div className="absolute w-[276px] h-[49px] top-[132px] left-0">
-              <button type="submit" className="relative w-[271px] h-[52px] bg-blue-600 rounded-[10px] border border-solid border-black">
-                <div className="w-[195px] h-[25px] top-3 left-10 text-white text-base text-center leading-[normal] absolute [font-family:'Inter-Regular',Helvetica] font-normal tracking-[0]">
-                  시작하기
-                </div>
-              </button>
-            </div>
-            <div className="w-[165px] h-[18px] top-[189px] left-[55px] text-black text-base text-center leading-[normal] whitespace-nowrap absolute [font-family:'Inter-Regular',Helvetica] font-normal tracking-[0]">
-              아이디/비밀번호 재발급
+              <SubmitButton>시작하기</SubmitButton>
             </div>
           </form>
+          <div className="w-[100%] h-[18px] top-[189px] left-0 text-black text-base text-center leading-[normal] absolute [font-family:'Inter-Regular',Helvetica] font-normal tracking-[0]">
+            아이디/비밀번호 재발급
+          </div>
         </div>
         <img
           className="absolute w-80 h-80 top-[52px] left-[35px] object-cover"
