@@ -1,5 +1,11 @@
+import { Outlet } from "react-router-dom";
+
 const Setting = () => {
-	return <div>세팅화면입니다.</div>;
+	return (
+		<div className="flex flex-col justify-center">
+			<Outlet />
+		</div>
+	);
 };
 
 export default Setting;
