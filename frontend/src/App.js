@@ -54,8 +54,11 @@ function App() {
 							element={<OutgoingReqList />}
 						/>
 					</Route>
-					<Route path="/" element={<LoginChoice />} />
-					<Route path="/signup" element={<SignUpChoice />} />
+					<Route path="/" element={<LoginChoice />} h />
+					<Route path="/signup-choice" element={<SignUpChoice />} />
+					<Route path="/signup-B-choice" element={<SignUpBrokerChoice />} />
+					<Route path="/signup-B-info" element={<SignUpBroker />} />
+					<Route path="/signup-info" element={<SignUpInfo />} />
 				</Routes>
 			</BrowserRouter>
 		</div>
