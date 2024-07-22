@@ -1,5 +1,5 @@
 import React from 'react';
-import InventoryItem from './InventoryItem';
+import InventoryListItem from './InventoryListItem';
 
 const InventoryList = () => {
     const items = Array.from({ length: 30 }, (_, index) => index + 1);
@@ -7,7 +7,7 @@ const InventoryList = () => {
     return (
         <div>
            {items.map(item => (
-                <InventoryItem key={item} /> // 각 InventoryItem에 고유한 key를 추가합니다
+                <InventoryListItem key={item} /> // 각 InventoryItem에 고유한 key를 추가합니다
             ))}
 
         </div>
