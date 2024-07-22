@@ -19,16 +19,16 @@ const SettingList = () => {
 					svg={settingIcon.alarmHistoryIcon}
 				/>
 			</div>
-			<div onClick={() => onClick("")}>
+			<div onClick={() => onClick("/setting/inventory")}>
 				<SettingItem
 					type={"재고 설정"}
 					svg={settingIcon.inventoryIcon}
 				/>
 			</div>
-			<div onClick={() => onClick("/setting/team-info")}>
+			<div onClick={() => onClick("/setting/team")}>
 				<SettingItem type={"팀 설정"} svg={settingIcon.teamIcon} />
 			</div>
-			<div onClick={() => onClick("/setting/qr-info")}>
+			<div onClick={() => onClick("/setting/qr")}>
 				<SettingItem type={"QR 정보"} svg={settingIcon.qrIcon} />
 			</div>
 			<div onClick={() => onClick("")}>
