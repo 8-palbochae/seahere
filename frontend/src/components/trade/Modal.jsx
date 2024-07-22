@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 const Modal = ({ isOpen, onClose, children }) => {
     if (!isOpen) return null;
-
+    
     return ReactDOM.createPortal(
         <div className='fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center z-50'>
             <div className='bg-white p-2 rounded-md shadow-lg max-w-5xl mx-auto w-11/12'>

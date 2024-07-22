@@ -18,6 +18,8 @@ import TeamInfo from "./components/setting/teaminfo/TeamInfo";
 import OutgoingReqList from "./pages/OutgoingReqList"
 import Trade from './pages/Trade';
 import BrokerDetailPage from './pages/BrokerDetailPage';
+import Cart from './pages/Cart';
+
 function App() {
 	return (
 		<div className="flex justify-center items-center bg-gray-100 jsu">
@@ -43,7 +45,7 @@ function App() {
 
 						<Route path="/trade" element={<Trade />} />
 						<Route path="/broker/:id" element={<BrokerDetailPage />} />
-
+						<Route path="/cart" element={<Cart/>}/>
 						<Route path="/incoming" element={<Income />} />
 						<Route path="/outgoing" />
 						<Route
