@@ -25,6 +25,10 @@ import Alarm from "./components/setting/alarm/Alarm";
 import IncomingList from "./pages/IncomingList";
 import AdjustList from "./pages/AdjustList";
 import AlarmHistory from "./components/common/header/AlarmHistory";
+import Trade from './pages/Trade';
+import BrokerDetailPage from './pages/BrokerDetailPage';
+import Cart from './pages/Cart';
+
 function App() {
 	return (
 		<div className="flex justify-center items-center bg-gray-100 jsu">
@@ -53,6 +57,11 @@ function App() {
 						<Route path="/main" element={<Main />} />
 						<Route path="/history" element={<History />} />
 						<Route path="/inventory" element={<InventoryView />} />
+
+						<Route path="/trade" element={<Trade />} />
+						<Route path="/broker/:id" element={<BrokerDetailPage />} />
+						<Route path="/cart" element={<Cart/>}/>
+
 						<Route path="/incoming" element={<Income />} />
 						<Route path="/outgoing" />
 						<Route
