@@ -3,13 +3,11 @@ import HistoryList from "../components/history/HistoryList";
 const History = () => {
 	return (
 		<div className="flex flex-col gap-3 items-center ">
-			<div className=" w-3/4">
+			<div className=" w-full">
 				<Period />
 			</div>
 			
-			<div>
-				<HistoryList/>
-			</div>
+			<HistoryList/>
 		</div>
 	);
 };
