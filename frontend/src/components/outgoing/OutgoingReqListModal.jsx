@@ -17,7 +17,7 @@ const OutgoingReqListModal = ({ handleCloseModal }) => {
             <div className="bg-white rounded-lg p-6 shadow-lg relative max-w-[600px] w-full">
                 <button
                     onClick={handleClose}
-                    className="bg-blue-500 text-white px-4 py-2 rounded mb-4 absolute top-2 right-2"
+                    className="bg-blue-600 text-white px-4 py-2 rounded mb-4 absolute top-2 right-2"
                 >
                     X
                 </button>
@@ -25,6 +25,8 @@ const OutgoingReqListModal = ({ handleCloseModal }) => {
                 <OutgoingReqListModaltitle />
                 </div>
                 <div className="mt-2">
+                    <OutgoingReqListModalDetail />
+                    <OutgoingReqListModalDetail />
                     <OutgoingReqListModalDetail />
                 </div>
 
@@ -34,7 +36,7 @@ const OutgoingReqListModal = ({ handleCloseModal }) => {
                 </button>
             
             
-                <button className="bg-blue-500 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                <button className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
                     수락
                 </button>
             </div>

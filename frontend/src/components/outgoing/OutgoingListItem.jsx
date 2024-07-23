@@ -53,18 +53,18 @@ const OutgoingListItem = () => {
                 >
                     
                     <div className="flex-1 flex justify-center items-center">
-                        <div className="w-[69px] text-center font-normal text-black text-base leading-[normal]">
+                        <div className="w-[69px] text-center font-normal text-black truncate  text-base leading-[normal]">
                             스파로스
                         </div>
                     </div>
                     <div className="flex-1 flex justify-center items-center">
-                        <div className="w-[90px] text-center font-normal text-black text-base leading-[normal]">
+                        <div className="w-[90px] text-center font-normal text-black truncate  text-base leading-[normal]">
                             넙치 외 3건
                         </div>
                     </div>
                     
                     <div className="flex-1 flex justify-center items-center">
-                        <div className="w-[70px] text-center font-normal text-black text-base leading-[normal]">
+                        <div className="w-[70px] text-center font-normal text-black truncate  text-base leading-[normal]">
                             출고 대기
                         </div>
                     </div>
