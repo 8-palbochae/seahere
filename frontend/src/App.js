@@ -9,17 +9,19 @@ import History from "./components/history/main/page/History.jsx";
 import InventoryView from "./pages/InventoryView";
 import Income from "./pages/Income";
 import SignUp from "./pages/SignUp.jsx";
+import {
+	MainSetting,
+	UserInfoSetting,
+	QrInfo,
+	PasswordChange,
+	TeamInfo,
+	InventorySetting,
+} from "./components/setting";
 import SignUpChoice from "./components/login_signup/pagecomponent/SignUpChoice.jsx";
 import SignUpBroker from "./components/login_signup/pagecomponent/SignUpBroker.jsx";
 import SignUpBrokerChoice from "./components/login_signup/pagecomponent/SignUpBrokerChoice.jsx";
 import SignUpInfo from "./components/login_signup/pagecomponent/SignUpInfo.jsx";
-import MainSetting from "./components/setting/main/MainSetting";
 import OutgoingList from "./components/history/outgoing/page/OutgoingList.jsx";
-import QrInfo from "./components/setting/qrinfo/QrInfo";
-import UserInfoSetting from "./components/setting/userinfo/UserInfoSetting";
-import PasswordChange from "./components/setting/userinfo/password_change/PasswordChange";
-import TeamInfo from "./components/setting/teaminfo/TeamInfo";
-import InventorySetting from "./components/setting/inventoryinfo/InventorySetting";
 
 import OutgoingReqList from "./components/history/outgoing/page/OutgoingReqList.jsx";
 import Alarm from "./components/setting/alarm/Alarm";
