@@ -1,13 +1,25 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import MainLogo from '../assets/common/MainLogo.svg';
 import background from '../assets/common/background.svg';
 import naver from '../assets/loginSignup/naver.svg';
 import google from '../assets/loginSignup/google.svg';
 import middleLine from '../assets/loginSignup/middle_Line.svg';
-import InputField from '../components/loginSignup/itemcomponent/InputField'; // 새로 정의한 InputField 컴포넌트를 가져옵니다
-import SubmitButton from '../components/loginSignup/itemcomponent/SubmitButton'; // 새로 정의한 SubmitButton 컴포넌트를 가져옵니다
+import InputField from '../components/loginsignup/itemcomponent/InputField';
+import SubmitButton from '../components/loginsignup/itemcomponent/SubmitButton';
+import FindPasswordModal from '../components/loginsignup/itemcomponent/FindPasswordModal'; // FindPasswordModal 컴포넌트 가져오기
 
 const LoginChoice = () => {
+	const [isModalOpen, setIsModalOpen] = useState(false);
+
+	const handleModalOpen = () => {
+		setIsModalOpen(true);
+	};
+
+	const handleModalClose = () => {
+		setIsModalOpen(false);
+	};
+
 	return (
 		<div>
 			<div className="relative w-[390px] h-[844px] bg-white">
@@ -55,8 +67,11 @@ const LoginChoice = () => {
 							<SubmitButton>시작하기</SubmitButton>
 						</div>
 					</form>
-					<div className="w-[100%] h-[18px] top-[189px] left-0 text-black text-base text-center leading-[normal] absolute [font-family:'Inter-Regular',Helvetica] font-normal tracking-[0]">
-						아이디/비밀번호 재발급
+					<div
+						className="w-[100%] h-[18px] top-[189px] left-0 text-black text-base text-center leading-[normal] absolute [font-family:'Inter-Regular',Helvetica] font-normal tracking-[0] cursor-pointer"
+						onClick={handleModalOpen}
+					>
+						아이디/비밀번호 찾기
 					</div>
 				</div>
 				<img
@@ -69,6 +84,18 @@ const LoginChoice = () => {
 				<Link to={"/main"}>메인으로</Link>
 				<Link to={"/incoming"}>입고화면으로</Link>
 			</div>
+
+			{isModalOpen && (
+				<div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+					<FindPasswordModal />
+					<button
+						className="absolute top-4 right-4 text-white"
+						onClick={handleModalClose}
+					>
+						닫기
+					</button>
+				</div>
+			)}
 		</div>
 	);
 };
