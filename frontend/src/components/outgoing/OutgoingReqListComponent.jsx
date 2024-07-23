@@ -12,6 +12,8 @@ const OutgoingReqListComponent = () => {
                 <PeriodEnd />
             </div>
             <OutgoingReqListItem />
+            <OutgoingReqListItem />
+            <OutgoingReqListItem />
         </div>
     );
 };

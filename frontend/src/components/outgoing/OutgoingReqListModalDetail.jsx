@@ -20,7 +20,7 @@ const OutgoingReqListModalDetail = () => {
     );
 
     return (
-        <div className="relative w-full max-w-[600px] bg-blue-300 rounded-[10px] shadow-lg px-4 py-4 overflow-hidden">
+        <div className="relative w-full max-w-[600px] rounded-[10px] shadow-lg px-4 py-4 overflow-hidden">
             <div
                 ref={itemRef}
                 className={`flex items-center justify-start w-full transition-transform duration-300 ease-in-out ${
@@ -31,31 +31,30 @@ const OutgoingReqListModalDetail = () => {
                 onTouchEnd={handleTouchEnd}
                 onMouseDown={handleMouseDown}
             >
-                {/* Item 1: 넙치 및 이미지 */}
-                <div className="relative flex items-center mr-2"> {/* 왼쪽으로 이동 */}
-                    <img className="w-[60px] h-[60px] object-cover relative bottom-4" alt="Image" src={nupchiIcon} />
-                    <div className="absolute top-[60%] left-0 right-0 text-center text-black font-normal text-base rounded-md px-2 py-1 bg-white bg-opacity-100">
+  
+                <div className="relative flex items-center mr-2"> 
+                    <img className="w-[60px] h-[60px] object-cover relative bottom-3" alt="Image" src={nupchiIcon} />
+                    <div className="absolute top-[60%] left-0 right-0 text-center truncate text-black font-normal text-base rounded-md px-2 py-1 bg-white bg-opacity-100">
                         넙치
                     </div>
                 </div>
 
-                {/* Item 2: 10kg */}
                 <div className="text-center flex-1">
-                    <div className="text-black font-normal text-base">
+                    <div className="text-black font-normal text-base truncate">
                         10kg
                     </div>
                 </div>
 
-                {/* Item 3: 10000원 */}
+
                 <div className="text-center flex-1">
-                    <div className="text-black font-normal text-base">
+                    <div className="text-black font-normal text-base truncate">
                         10000원
                     </div>
                 </div>
 
                 {/* Item 4: 100→20 */}
                 <div className="text-center flex-1">
-                    <div className="text-black font-normal text-base">
+                    <div className="text-black font-normal text-base truncate">
                         100→20
                     </div>
                 </div>
