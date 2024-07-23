@@ -3,9 +3,11 @@ import dayjs from 'dayjs';
 import useDragHandler from '../../hooks/useDragHandler';
 import '../inventory/styles/InventoryItem.css';
 import InventoryItemDetails from '../inventory/InventoryItemDetails';
+import OutgoingDelete from './OutgoingDelete';
 
 const OutgoingListItem = () => {
     const [isSwiped, setIsSwiped] = useState(false);
+    const [showOutgoingDelete, setShowOutgoingDelete] = useState(false);
 
     // 핸들러 함수들
     const handleSwipeLeft = () => {
@@ -14,6 +16,10 @@ const OutgoingListItem = () => {
 
     const handleSwipeRight = () => {
         setIsSwiped(false);
+    };
+
+    const handleOutgoingDeleteClose = () => {
+        setShowOutgoingDelete(false);
     };
 
     const { itemRef, handleTouchStart, handleTouchMove, handleTouchEnd, handleMouseDown } = useDragHandler(
@@ -29,7 +35,7 @@ const OutgoingListItem = () => {
 
     return (
         <div className="relative w-full flex flex-col">
-            <div className="relative w-full flex">
+            <div className="relative w-full flex ">
                 <div
                     ref={itemRef}
                     className={`flex w-full h-[98px] bg-white rounded-[20px] border-[3px] border-solid border-blue-300 items-center px-4 transition-transform duration-300 ease-in-out ${isSwiped ? 'translate-x-[-100px]' : 'translate-x-0'
@@ -61,14 +67,17 @@ const OutgoingListItem = () => {
                         </div>
                     </div>
                 </div>
+                {isSwiped && (
                 <button
-                    className={`absolute right-0 h-[98px] bg-blue-600 text-white py-2 px-4 rounded-r-lg shadow-lg flex items-center justify-center transition-width duration-300 ease-in-out ${isSwiped ? 'block' : 'hidden'}`}
+                    className="absolute right-0 h-[98px] bg-blue-600 text-white py-2 px-4 rounded-r-lg shadow-lg flex items-center justify-center transition-width duration-300 ease-in-out block"
                     style={{ width: '100px' }}
-                    onClick={() => alert('삭제되었습니다.')}
+                    onClick={() => setShowOutgoingDelete(true)}
                 >
-                    삭제
+                    출고 완료
                 </button>
-            </div>
+            )}
+             {showOutgoingDelete && <OutgoingDelete onClose={handleOutgoingDeleteClose} />}
+             </div>
             <div
                 className={`transition-height overflow-hidden flex flex-col justify-center items-center ${isExpanded ? 'details-open' : 'details-closed'}`}
             >
