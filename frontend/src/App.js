@@ -61,29 +61,27 @@ function App() {
 						<Route path="/main" element={<Main />}>
 							<Route path="" element={<BrokerMain />} />
 						</Route>
-
 						<Route path="/histories" element={<HistoryOutlet />}>
-						<Route path="" element={<History />} />
-						<Route
-							path="outgoings"
-							element={<OutgoingList />}
-						/>
-						<Route
-							path="incomingList"
-							element={<IncomingList />}
-						/>
-						<Route
-							path="outgoings/requests"
-							element={<OutgoingReqList />}
-						/>
-						<Route path="adjusts" element={<AdjustList />} />
-					</Route>
-						
+							<Route path="" element={<History />} />
+							<Route
+								path="outgoings"
+								element={<OutgoingList />}
+							/>
+							<Route
+								path="incomingList"
+								element={<IncomingList />}
+							/>
+							<Route
+								path="outgoings/requests"
+								element={<OutgoingReqList />}
+							/>
+							<Route path="adjusts" element={<AdjustList />} />
+						</Route>
 						<Route
 							path="/inventories"
 							element={<InventoryView />}
 						/>
-						{/* inventories */}
+
 						<Route path="/trades" element={<TradeView />}>
 							<Route path="" element={<TradeMain />} />
 							<Route
@@ -91,11 +89,8 @@ function App() {
 								element={<TradeBrokerMain />}
 							/>
 						</Route>
-						<Route path="/cart" element={<Cart />} /> {/* carts */}
+						<Route path="/carts" element={<Cart />} />
 						<Route path="/incoming" element={<Income />} />
-						
-						
-						
 						<Route
 							path="/alarm-history"
 							element={<AlarmHistory />}
@@ -111,8 +106,6 @@ function App() {
 							element={<SignUpBrokerChoice />}
 						/>
 					</Route>
-					
-					
 				</Routes>
 			</BrowserRouter>
 		</div>
