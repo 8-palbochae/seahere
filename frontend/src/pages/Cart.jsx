@@ -4,7 +4,7 @@ import CartButtonGroup from '../components/trade/cart/CartButtonGroup';
 
 const Cart = () => {
     return (
-        <div className='flex flex-col w-full max-w-4xl h-screen relative'>
+        <div className='flex flex-col w-full max-w-4xl relative'>
             <div className='flex-grow overflow-y-auto mb-28'>
                 <CartItemList/>
             </div>
