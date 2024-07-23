@@ -9,10 +9,10 @@ import History from "./pages/History";
 import InventoryView from "./pages/InventoryView";
 import Income from "./pages/Income";
 import SignUp from "./pages/SignUp.jsx";
-import SignUpChoice from "./pages/loginSignup/SignUpChoice";
-import SignUpBroker from "./pages/loginSignup/SignUpBroker";
-import SignUpBrokerChoice from "./pages/loginSignup/SignUpBrokerChoice";
-import SignUpInfo from "./pages/loginSignup/SignUpInfo";
+import SignUpChoice from "../src/components/loginSignup/loginSignup/SignUpChoice.jsx";
+import SignUpBroker from "../src/components/loginSignup/loginSignup/SignUpBroker";
+import SignUpBrokerChoice from "../src/components/loginSignup/loginSignup/SignUpBrokerChoice";
+import SignUpInfo from "../src/components/loginSignup/loginSignup/SignUpInfo";
 import MainSetting from "./components/setting/main/MainSetting";
 import OutgoingList from "./pages/OutgoingList";
 import QrInfo from "./components/setting/qrinfo/QrInfo";
@@ -93,7 +93,6 @@ function App() {
 							element={<AlarmHistory />}
 						/>
 					</Route>
-<<<<<<< HEAD
 					<Route path="/login" element={<LoginChoice />} /> {/* /login */} 
 					<Route path="/signup" element={<SignUp />}>
 						<Route path="" element={<SignUpInfo />} /> 
@@ -101,21 +100,6 @@ function App() {
 						<Route path="choice" element={<SignUpChoice />} /> {/* /signup/choice */}
 						<Route path="broker-choice" element={<SignUpBrokerChoice />} /> {/* /signup/broker-choice */}
 					</Route> {/* /signup */}
-
-=======
-					<Route path="/" element={<LoginChoice />} /> {/* /login */}
-					<Route path="/signup-choice" element={<SignUpChoice />} />
-					{/* /signup/choice */}
-					<Route
-						path="/signup-B-choice"
-						element={<SignUpBrokerChoice />}
-					/>
-					{/* /signup/broker/choice */}
-					<Route path="/signup-B-info" element={<SignUpBroker />} />
-					{/* /signup/broker */}
-					<Route path="/signup-info" element={<SignUpInfo />} />
-					{/* /signup */}
->>>>>>> 494f84fb82a9f80f340f02731d85047e235c701a
 				</Routes>
 			</BrowserRouter>
 		</div>
