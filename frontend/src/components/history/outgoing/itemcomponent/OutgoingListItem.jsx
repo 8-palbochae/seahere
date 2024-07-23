@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import dayjs from 'dayjs';
-import useDragHandler from '../../hooks/useDragHandler';
-import '../inventory/styles/InventoryItem.css';
-import InventoryItemDetails from '../inventory/InventoryItemDetails';
+import useDragHandler from '../../../../hooks/useDragHandler';
+import '../../../inventory/styles/InventoryItem.css'
+import InventoryItemDetails from '../../../inventory/InventoryItemDetails';
 import OutgoingDelete from './OutgoingDelete';
 
 const OutgoingListItem = () => {
