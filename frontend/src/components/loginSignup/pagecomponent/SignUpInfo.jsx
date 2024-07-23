@@ -3,9 +3,9 @@ import DaumPostcode from 'react-daum-postcode';
 import MainLogo from '../../../assets/common/MainLogo.svg';
 import background from '../../../assets/common/background.svg';
 import back from '../../../assets/loginsignup/backbutton.svg';
-import Background from '../../../components/loginsignup/itemcomponent/Background';
-import InputField from '../../../components/loginsignup/itemcomponent/InputField';
-import SubmitButton from '../../../components/loginsignup/itemcomponent/SubmitButton';
+import Background from '../itemcomponent/Background';
+import InputField from '../itemcomponent/InputField';
+import SubmitButton from '../itemcomponent/SubmitButton';
 
 const SignUpInfo = () => {
   const [isPostcodeOpen, setIsPostcodeOpen] = useState(false);
