@@ -10,7 +10,7 @@ const SettingList = () => {
 	};
 	return (
 		<div className="flex flex-col  w-full h-full">
-			<div onClick={() => onClick("/setting/alarm")}>
+			<div onClick={() => onClick("/setting/alarms")}>
 				<SettingItem type={"알람 보내기"} svg={settingIcon.sendIcon} />
 			</div>
 			<div onClick={() => onClick("/setting/alarm-history")}>
@@ -19,13 +19,13 @@ const SettingList = () => {
 					svg={settingIcon.alarmHistoryIcon}
 				/>
 			</div>
-			<div onClick={() => onClick("/setting/inventory")}>
+			<div onClick={() => onClick("/setting/inventories")}>
 				<SettingItem
 					type={"재고 설정"}
 					svg={settingIcon.inventoryIcon}
 				/>
 			</div>
-			<div onClick={() => onClick("/setting/team")}>
+			<div onClick={() => onClick("/setting/teams")}>
 				<SettingItem type={"팀 설정"} svg={settingIcon.teamIcon} />
 			</div>
 			<div onClick={() => onClick("/setting/qr")}>
