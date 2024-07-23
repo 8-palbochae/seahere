@@ -1,5 +1,5 @@
 import React from 'react';
-import productImg from '../../assets/income/product.svg';
+import productImg from '../../../assets/income/product.svg';
 import { Select } from 'antd';
 
 const InventoryEditModal = ({ isOpen, onClose }) => {

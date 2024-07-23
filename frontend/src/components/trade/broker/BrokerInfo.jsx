@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
-import { tradeIcon } from '../../constants/trade/trade.image';
+import { tradeIcon } from '../../../constants/trade/trade.image';
 
 const BrokerItem = ({ id }) => { // Accept `id` as a prop
     const [isLike, setIsLike] = useState(false);
@@ -13,7 +13,7 @@ const BrokerItem = ({ id }) => { // Accept `id` as a prop
     }
 
     const handleBrokerClick = () => {
-        navigate(`/broker/${id}`); // Navigate to the broker detail page with ID
+        navigate(`broker/${id}`); // Navigate to the broker detail page with ID
     }
 
     return (

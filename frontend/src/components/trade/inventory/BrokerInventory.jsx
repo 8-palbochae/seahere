@@ -2,11 +2,11 @@
 
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import Modal from './Modal';
-import TradeInventoryContent from './TradeInventoryContent';
+import CartModal from '../cart/CartModal';
+import BrokerInventoryItem from './BrokerInventoryItem';
 import { useNavigate } from 'react-router-dom';
 
-const TradeInventory = () => {
+const BrokerInventory = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const navigate = useNavigate();
     const handleOpenModal = () => setIsModalOpen(true);
@@ -24,23 +24,23 @@ const TradeInventory = () => {
                     className='w-full cursor-pointer flex flex-col gap-2'
                     onClick={handleOpenModal}
                 >
-                    <TradeInventoryContent />
-                    <TradeInventoryContent />
-                    <TradeInventoryContent />
-                    <TradeInventoryContent />
-                    <TradeInventoryContent />
-                    <TradeInventoryContent />
-                    <TradeInventoryContent />
-                    <TradeInventoryContent />
-                    <TradeInventoryContent />
+                    <BrokerInventoryItem />
+                    <BrokerInventoryItem />
+                    <BrokerInventoryItem />
+                    <BrokerInventoryItem />
+                    <BrokerInventoryItem />
+                    <BrokerInventoryItem />
+                    <BrokerInventoryItem />
+                    <BrokerInventoryItem />
+                    <BrokerInventoryItem />
                 </div>
                 
                 {/* Modal Component */}
-                <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
+                <CartModal isOpen={isModalOpen} onClose={handleCloseModal}>
                     <div className='p-4 w-full'>
-                        <TradeInventoryContent />
+                        <BrokerInventoryItem />
                     </div>
-                </Modal>
+                </CartModal>
             </div>
 
             {/* Button Positioned at the Bottom of the Viewport */}
@@ -53,6 +53,6 @@ const TradeInventory = () => {
     );
 };
 
-TradeInventory.propTypes = {};
+BrokerInventory.propTypes = {};
 
-export default TradeInventory;
+export default BrokerInventory;

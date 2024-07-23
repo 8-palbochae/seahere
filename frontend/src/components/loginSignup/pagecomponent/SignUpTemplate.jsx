@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import MainLogo from '../../assets/common/MainLogo.svg';
 import background from '../../assets/common/background.svg';
-import back from '../../assets/loginSignup/backbutton.svg';
+import back from '../../assets/loginsignup/backbutton.svg';
 
 const SignUpChoice = () => {
   return (

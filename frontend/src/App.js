@@ -26,10 +26,11 @@ import Alarm from "./components/setting/alarm/Alarm";
 import IncomingList from "./pages/IncomingList";
 import AdjustList from "./pages/AdjustList";
 import AlarmHistory from "./components/common/header/AlarmHistory";
-import Trade from "./pages/Trade";
-import BrokerDetailPage from "./pages/BrokerDetailPage";
 import Cart from "./pages/Cart";
 import BrokerMain from "./components/main/broker/BrokerMain";
+import TradeMain from './components/trade/TradeMain';
+import TradeView from './pages/TradeView';
+import TradeBrokerMain from './components/trade/TradeBrokerMain';
 
 function App() {
 	return (
@@ -61,16 +62,16 @@ function App() {
 						</Route>
 						<Route path="/history" element={<History />} />
 						{/* histories */}
-						<Route path="/inventory" element={<InventoryView />} />
+						<Route path="/inventories" element={<InventoryView />} />
 						{/* inventories */}
-						<Route path="/trade" element={<Trade />} />
-						{/* trades */}
-						<Route
-							path="/broker/:id"
-							element={<BrokerDetailPage />}
-						/>
-						{/* /brokers/:id */}
+						
+						<Route path="/trades" element={<TradeView />}>
+							<Route path="" element={<TradeMain />} />
+							<Route path="broker/:id" element={<TradeBrokerMain/>}/>
+						</Route>
+
 						<Route path="/cart" element={<Cart />} /> {/* carts */}
+
 						<Route path="/incoming" element={<Income />} />
 						<Route
 							path="/outgoingList"

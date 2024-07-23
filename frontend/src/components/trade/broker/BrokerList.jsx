@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import BrokerItem from './BrokerItem';
+import BrokerInfo from './BrokerInfo';
 
 const brokers = [
     { id: '1', name: '여보소 수산', address: '부산 해운대구 APEC로 17 센텀리더스마크', details: '우동 1514' },
@@ -9,16 +9,16 @@ const brokers = [
     // Add more brokers here
 ];
 
-const TradeBrokerList = () => {
+const BrokerList = () => {
     return (
         <div className='flex flex-col items-center my-2 w-11/12'>
             {brokers.map(broker => (
-                <BrokerItem key={broker.id} id={broker.id} name={broker.name} address={broker.address} details={broker.details} />
+                <BrokerInfo key={broker.id} id={broker.id} name={broker.name} address={broker.address} details={broker.details} />
             ))}
         </div>
     );
 };
 
-TradeBrokerList.propTypes = {};
+BrokerList.propTypes = {};
 
-export default TradeBrokerList;
+export default BrokerList;
