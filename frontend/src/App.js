@@ -8,10 +8,11 @@ import Main from "./pages/Main";
 import History from "./pages/History";
 import InventoryView from "./pages/InventoryView";
 import Income from "./pages/Income";
-import SignUpChoice from "./pages/loginSignup/SignUpChoice";
-import SignUpBroker from "./pages/loginSignup/SignUpBroker";
-import SignUpBrokerChoice from "./pages/loginSignup/SignUpBrokerChoice";
-import SignUpInfo from "./pages/loginSignup/SignUpInfo";
+import SignUp from "./pages/SignUp.jsx";
+import SignUpChoice from "./components/loginsignup/pagecomponent/SignUpChoice.jsx";
+import SignUpBroker from "./components/loginsignup/pagecomponent/SignUpBroker.jsx";
+import SignUpBrokerChoice from "./components/loginsignup/pagecomponent/SignUpBrokerChoice.jsx";
+import SignUpInfo from "./components/loginsignup/pagecomponent/SignUpInfo.jsx";
 import MainSetting from "./components/setting/main/MainSetting";
 import OutgoingList from "./pages/OutgoingList";
 import QrInfo from "./components/setting/qrinfo/QrInfo";
@@ -93,18 +94,13 @@ function App() {
 							element={<AlarmHistory />}
 						/>
 					</Route>
-					<Route path="/" element={<LoginChoice />} /> {/* /login */}
-					<Route path="/signup-choice" element={<SignUpChoice />} />
-					{/* /signup/choice */}
-					<Route
-						path="/signup-B-choice"
-						element={<SignUpBrokerChoice />}
-					/>
-					{/* /signup/broker/choice */}
-					<Route path="/signup-B-info" element={<SignUpBroker />} />
-					{/* /signup/broker */}
-					<Route path="/signup-info" element={<SignUpInfo />} />
-					{/* /signup */}
+					<Route path="/login" element={<LoginChoice />} /> {/* /login */} 
+					<Route path="/signup" element={<SignUp />}>
+						<Route path="" element={<SignUpInfo />} /> 
+						<Route path="broker" element={<SignUpBroker />} /> 
+						<Route path="choice" element={<SignUpChoice />} /> {/* /signup/choice */}
+						<Route path="broker-choice" element={<SignUpBrokerChoice />} /> {/* /signup/broker-choice */}
+					</Route> {/* /signup */}
 				</Routes>
 			</BrowserRouter>
 		</div>

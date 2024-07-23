@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { DatePicker } from 'antd';
 import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
-import MainLogo from '../../assets/common/MainLogo.svg';
-import background from '../../assets/common/background.svg';
-import back from '../../assets/loginSignup/backbutton.svg';
-import camera from '../../assets/loginSignup/camera.svg';
-import Background from '../../components/loginSignup/Background';
-import InputField from '../../components/loginSignup/InputField';
-import SubmitButton from '../../components/loginSignup/SubmitButton';
-import BrokerCheckModal from '../../components/loginSignup/BrokerCheckModal';
+import MainLogo from '../../../assets/common/MainLogo.svg';
+import background from '../../../assets/common/background.svg';
+import back from '../../../assets/loginSignup/backbutton.svg';
+import camera from '../../../assets/loginSignup/camera.svg';
+import Background from '../../../components/loginsignup/itemcomponent/Background';
+import InputField from '../../../components/loginsignup/itemcomponent/InputField';
+import SubmitButton from '../../../components/loginsignup/itemcomponent/SubmitButton';
+import BrokerCheckModal from '../../../components/loginsignup/itemcomponent/BrokerCheckModal';
 
 dayjs.extend(customParseFormat);
 
@@ -36,7 +36,7 @@ const SignUpBroker = () => {
   };
 
   return (
-    <Background backgroundSrc={background} logoSrc={MainLogo} backButtonSrc={back} backLink={"/signup-B-choice"}>
+    <Background backgroundSrc={background} logoSrc={MainLogo} backButtonSrc={back} backLink={"/signup/broker-choice"}>
       <div className="absolute top-[418px] left-1/2 transform -translate-x-1/2 w-full max-w-[276px] text-center">
         <div className="mb-4">
           <img className="mx-auto" src={camera} alt="Camera" />

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import DaumPostcode from 'react-daum-postcode';
-import MainLogo from '../../assets/common/MainLogo.svg';
-import background from '../../assets/common/background.svg';
-import back from '../../assets/loginSignup/backbutton.svg';
-import Background from '../../components/loginSignup/Background';
-import InputField from '../../components/loginSignup/InputField';
-import SubmitButton from '../../components/loginSignup/SubmitButton';
+import MainLogo from '../../../assets/common/MainLogo.svg';
+import background from '../../../assets/common/background.svg';
+import back from '../../../assets/loginSignup/backbutton.svg';
+import Background from '../../../components/loginsignup/itemcomponent/Background';
+import InputField from '../../../components/loginsignup/itemcomponent/InputField';
+import SubmitButton from '../../../components/loginsignup/itemcomponent/SubmitButton';
 
 const SignUpInfo = () => {
   const [isPostcodeOpen, setIsPostcodeOpen] = useState(false);
@@ -31,7 +31,7 @@ const SignUpInfo = () => {
   };
 
   return (
-    <Background backgroundSrc={background} logoSrc={MainLogo} backButtonSrc={back} backLink={"/"}>
+    <Background backgroundSrc={background} logoSrc={MainLogo} backButtonSrc={back} backLink={"/login"}>
       <div className="absolute top-[400px] left-1/2 transform -translate-x-1/2 w-full max-w-[276px]">
         <form className="relative w-full max-w-[276px]">
           <div className="mt-2">
