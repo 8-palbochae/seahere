@@ -2,9 +2,9 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { tradeIcon } from '../../constants/trade/trade.image';
+import { tradeIcon } from '../../../constants/trade/trade.image';
 
-const TradeInventoryContent = () => {
+const BrokerInventoryItem = () => {
     return (
         <div className='flex flex-row justify-between items-center w-full border border-gray-300 rounded-md'>
             <div className='w-1/5 flex flex-col items-center text-center p-2 '>
@@ -35,6 +35,6 @@ const TradeInventoryContent = () => {
     );
 };
 
-TradeInventoryContent.propTypes = {};
+BrokerInventoryItem.propTypes = {};
 
-export default TradeInventoryContent;
+export default BrokerInventoryItem;

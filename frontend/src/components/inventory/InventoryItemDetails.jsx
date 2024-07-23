@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import useInventorySlide from '../../hooks/inventory/useInventorySlide';
 import { iventoryIcon } from '../../constants/iventory/iventory.image';
-import InventoryEditModal from './InventoryEditModal';
-import InventoryDeleteModal from './InventoryDeleteModal';
+import InventoryEditModal from './modal/InventoryEditModal';
+import InventoryDeleteModal from './modal/InventoryDeleteModal';
 
 
 const InventoryItemDetails = () => {

@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 
-const Modal = ({ isOpen, onClose, children }) => {
+const CartModal = ({ isOpen, onClose, children }) => {
     if (!isOpen) return null;
     
     return ReactDOM.createPortal(
@@ -47,10 +47,10 @@ const Modal = ({ isOpen, onClose, children }) => {
     );
 };
 
-Modal.propTypes = {
+CartModal.propTypes = {
     isOpen: PropTypes.bool.isRequired,
     onClose: PropTypes.func.isRequired,
     children: PropTypes.node.isRequired,
 };
 
-export default Modal;
+export default CartModal;
