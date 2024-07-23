@@ -1,17 +1,24 @@
 import React, { useState } from 'react';
+import { DatePicker } from 'antd';
+import dayjs from 'dayjs';
+import customParseFormat from 'dayjs/plugin/customParseFormat';
 import MainLogo from '../../assets/common/MainLogo.svg';
 import background from '../../assets/common/background.svg';
 import back from '../../assets/loginSignup/backbutton.svg';
 import camera from '../../assets/loginSignup/camera.svg';
-import calendar from '../../assets/loginSignup/calendar.svg';
 import Background from '../../components/loginSignup/Background';
 import InputField from '../../components/loginSignup/InputField';
 import SubmitButton from '../../components/loginSignup/SubmitButton';
 import BrokerCheckModal from '../../components/loginSignup/BrokerCheckModal';
 
+dayjs.extend(customParseFormat);
+
+const dateFormat = 'YYYY/MM/DD';
+
 const SignUpBroker = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isBrokerCheckSuccess, setIsBrokerCheckSuccess] = useState(null);
+  const [issueDate, setIssueDate] = useState(null);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -21,6 +28,11 @@ const SignUpBroker = () => {
 
   const closeModal = () => {
     setIsModalOpen(false);
+  };
+
+  const handleDateChange = (date) => {
+    setIssueDate(date);
+    console.log('Selected Date: ', date ? date.format(dateFormat) : null);
   };
 
   return (
@@ -33,11 +45,13 @@ const SignUpBroker = () => {
           <InputField type="text" name="representativeName" placeholder="대표자 성명" />
           <InputField type="text" name="businessNumber" placeholder="사업자 등록번호" />
           <div className="relative">
-            <InputField type="text" name="issueDate" placeholder="발급 일자" />
-            <img
-              className="absolute right-3 top-1/2 transform -translate-y-1/2"
-              src={calendar}
-              alt="Calendar"
+            <DatePicker
+              format={dateFormat}
+              inputReadOnly={true} // 자판 비활성화
+              onChange={handleDateChange}
+              placeholder="발급 일자"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md font-normal text-black leading-normal"
+              style={{ width: '100%' }}
             />
           </div>
           <SubmitButton>진위 여부 확인</SubmitButton>
