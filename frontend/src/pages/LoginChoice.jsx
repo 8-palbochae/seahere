@@ -2,9 +2,9 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import MainLogo from '../assets/common/MainLogo.svg';
 import background from '../assets/common/background.svg';
-import naver from '../assets/loginSignup/naver.svg';
-import google from '../assets/loginSignup/google.svg';
-import middleLine from '../assets/loginSignup/middle_Line.svg';
+import naver from '../assets/loginsignup/naver.svg';
+import google from '../assets/loginsignup/google.svg';
+import middleLine from '../assets/loginsignup/middle_Line.svg';
 import InputField from '../components/loginsignup/itemcomponent/InputField';
 import SubmitButton from '../components/loginsignup/itemcomponent/SubmitButton';
 import FindPasswordModal from '../components/loginsignup/itemcomponent/FindPasswordModal'; // FindPasswordModal 컴포넌트 가져오기
