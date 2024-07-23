@@ -18,7 +18,7 @@ const BrokerCheckModal = ({ onClose, success, message }) => {
                 </p>
                 <div className="w-full flex justify-center">
                     {success ? (
-                        <Link to="/signup-info">
+                        <Link to="/signup">
                             <button
                                 className="w-[100px] h-8 bg-blue-600 rounded-[10px] text-white text-center font-medium"
                             >

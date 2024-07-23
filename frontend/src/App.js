@@ -8,6 +8,7 @@ import Main from "./pages/Main";
 import History from "./pages/History";
 import InventoryView from "./pages/InventoryView";
 import Income from "./pages/Income";
+import SignUp from "./pages/SignUp.jsx";
 import SignUpChoice from "./pages/loginSignup/SignUpChoice";
 import SignUpBroker from "./pages/loginSignup/SignUpBroker";
 import SignUpBrokerChoice from "./pages/loginSignup/SignUpBrokerChoice";
@@ -92,6 +93,16 @@ function App() {
 							element={<AlarmHistory />}
 						/>
 					</Route>
+<<<<<<< HEAD
+					<Route path="/login" element={<LoginChoice />} /> {/* /login */} 
+					<Route path="/signup" element={<SignUp />}>
+						<Route path="" element={<SignUpInfo />} /> 
+						<Route path="broker" element={<SignUpBroker />} /> 
+						<Route path="choice" element={<SignUpChoice />} /> {/* /signup/choice */}
+						<Route path="broker-choice" element={<SignUpBrokerChoice />} /> {/* /signup/broker-choice */}
+					</Route> {/* /signup */}
+
+=======
 					<Route path="/" element={<LoginChoice />} /> {/* /login */}
 					<Route path="/signup-choice" element={<SignUpChoice />} />
 					{/* /signup/choice */}
@@ -104,6 +115,7 @@ function App() {
 					{/* /signup/broker */}
 					<Route path="/signup-info" element={<SignUpInfo />} />
 					{/* /signup */}
+>>>>>>> 494f84fb82a9f80f340f02731d85047e235c701a
 				</Routes>
 			</BrowserRouter>
 		</div>
