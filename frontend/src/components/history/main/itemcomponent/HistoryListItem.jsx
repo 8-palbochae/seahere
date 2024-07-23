@@ -1,8 +1,8 @@
 import React from 'react';
-import { ReactComponent as Outgoing } from "../../assets/history/outgoing-icon.svg";
-import { ReactComponent as Incoming } from "../../assets/history/incoming-icon.svg";
-import { ReactComponent as Adjust } from "../../assets/history/adjust-icon.svg";
-import useHistoryHandler from '../../hooks/History/historyHandler';
+import { ReactComponent as Outgoing } from "../../../../assets/history/outgoing-icon.svg";
+import { ReactComponent as Incoming } from "../../../../assets/history/incoming-icon.svg";
+import { ReactComponent as Adjust } from "../../../../assets/history/adjust-icon.svg";
+import useHistoryHandler from '../../../../hooks/History/historyHandler';
 import dayjs from 'dayjs';
 
 const HistoryListItem = ({ type }) => {

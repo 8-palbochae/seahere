@@ -1,7 +1,7 @@
 import React from 'react';
 import OutgoingReqListItem from './OutgoingReqListItem';
-import PeriodStart from '../history/PeriodStart';
-import PeriodEnd from '../history/PeriodEnd';
+import PeriodStart from '../../main/itemcomponent/PeriodStart';
+import PeriodEnd from '../../main/itemcomponent/PeriodEnd';
 
 const OutgoingReqListComponent = () => {
     return (

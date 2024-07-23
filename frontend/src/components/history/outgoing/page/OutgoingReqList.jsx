@@ -1,10 +1,11 @@
 import React from 'react';
-import NoQRSearchInput from '../components/common/NoQRSearchInput';
-import OutgoingReqListComponent from '../components/outgoing/OutgoingReqListComponent';
-import SearchInputFilter from '../components/common/SearchInputFilter';
+import NoQRSearchInput from '../../../common/NoQRSearchInput';
+import OutgoingReqListComponent from '../itemcomponent/OutgoingReqListComponent';
+import SearchInputFilter from '../../../common/SearchInputFilter';
 
 const OutgoingReqList = () => {
     return (
+        
         <div>
             <div>
                 <SearchInputFilter />

@@ -1,6 +1,6 @@
 import React from 'react';
-import IncomingListTitle from '../components/incoming/IncomingListTitle';
-import IncomingListComponent from '../components/incoming/IncomingListComponent';
+import IncomingListTitle from '../itemcomponent/IncomingListTitle';
+import IncomingListComponent from '../itemcomponent/IncomingListComponent';
 
 const IncomingList = () => {
     return (

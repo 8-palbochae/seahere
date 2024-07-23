@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import nupchiIcon from '../../assets/history/nupchi-icon.png';
-import useDragHandler from '../../hooks/useDragHandler';
+import nupchiIcon from '../../../../assets/history/nupchi-icon.png'
+import useDragHandler from '../../../../hooks/useDragHandler';
 
 const OutgoingReqListModalDetail = () => {
     const [isSwiped, setIsSwiped] = useState(false);

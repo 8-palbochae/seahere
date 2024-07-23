@@ -1,5 +1,5 @@
 import React from 'react';
-import nupchiIcon from '../../assets/history/nupchi-icon.png';
+import nupchiIcon from '../../../../assets/history/nupchi-icon.png';
 
 const IncomingListItem = () => {
     // 날짜 데이터 예시

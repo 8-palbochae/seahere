@@ -1,6 +1,6 @@
 import React from 'react';
-import AdjustListTitle from '../components/adjust/AdjustListTitle';
-import AdjustListComponent from '../components/adjust/AdjustListComponent';
+import AdjustListTitle from '../itemcomponent/AdjustListTitle';
+import AdjustListComponent from '../itemcomponent/AdjustListComponent';
 
 const AdjustList = () => {
     return (

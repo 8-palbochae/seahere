@@ -7,13 +7,13 @@ const useHistoryHandler = () => {
     const handleNavigation = (type) => {
         switch (type) {
             case '출고':
-                navigate('/outgoingList');
+                navigate('outgoings');
                 break;
             case '입고':
-                navigate('/incomingList'); 
+                navigate('incomingList'); 
                 break;
             case '조정':
-                navigate('/adjustList'); 
+                navigate('adjusts'); 
                 break;
             default:
                 break;

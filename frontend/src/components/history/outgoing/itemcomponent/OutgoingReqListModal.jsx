@@ -15,12 +15,15 @@ const OutgoingReqListModal = ({ handleCloseModal }) => {
     return (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 px-3">
             <div className="bg-white rounded-lg p-6 shadow-lg relative max-w-[600px] w-full">
+            <div className="flex justify-center items-center relative">
+            <span className="text-lg font-semibold mt-2">요청 상세</span>
                 <button
                     onClick={handleClose}
-                    className="bg-blue-600 text-white px-4 py-2 rounded mb-4 absolute top-2 right-2"
+                    className="absolute top-0 right-0 bg-blue-600 text-white px-4 py-2 rounded mb-4"
                 >
                     X
                 </button>
+                </div>
                 <div className="mt-8">
                 <OutgoingReqListModaltitle />
                 </div>
