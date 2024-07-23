@@ -53,24 +53,21 @@ function App() {
 								path="inventories"
 								element={<InventorySetting />}
 							/>
-							<Route path="alarms" element={<Alarm />} />{" "}
+							<Route path="alarms" element={<Alarm />} />
 						</Route>
 						<Route path="/main" element={<Main />}>
 							<Route path="" element={<BrokerMain />} />
 						</Route>
-						<Route path="/history" element={<History />} />{" "}
+						<Route path="/history" element={<History />} />
 						{/* histories */}
-						<Route
-							path="/inventory"
-							element={<InventoryView />}
-						/>{" "}
+						<Route path="/inventory" element={<InventoryView />} />
 						{/* inventories */}
-						<Route path="/trade" element={<Trade />} />{" "}
+						<Route path="/trade" element={<Trade />} />
 						{/* trades */}
 						<Route
 							path="/broker/:id"
 							element={<BrokerDetailPage />}
-						/>{" "}
+						/>
 						{/* /brokers/:id */}
 						<Route path="/cart" element={<Cart />} /> {/* carts */}
 						<Route path="/incoming" element={<Income />} />
@@ -88,7 +85,7 @@ function App() {
 							path="/incomingList"
 							element={<IncomingList />}
 						/>
-						<Route path="/adjustList" element={<AdjustList />} />{" "}
+						<Route path="/adjustList" element={<AdjustList />} />
 						{/* /adjusts */}
 						<Route
 							path="/alarm-history"
@@ -96,20 +93,14 @@ function App() {
 						/>
 					</Route>
 					<Route path="/" element={<LoginChoice />} /> {/* /login */}
-					<Route
-						path="/signup-choice"
-						element={<SignUpChoice />}
-					/>{" "}
+					<Route path="/signup-choice" element={<SignUpChoice />} />
 					{/* /signup/choice */}
 					<Route
 						path="/signup-B-choice"
 						element={<SignUpBrokerChoice />}
 					/>
 					{/* /signup/broker/choice */}
-					<Route
-						path="/signup-B-info"
-						element={<SignUpBroker />}
-					/>{" "}
+					<Route path="/signup-B-info" element={<SignUpBroker />} />
 					{/* /signup/broker */}
 					<Route path="/signup-info" element={<SignUpInfo />} />
 					{/* /signup */}
