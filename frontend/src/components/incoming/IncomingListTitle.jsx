@@ -18,9 +18,7 @@ const IncomingListTitle = () => {
                     <br />
                     /1kg
                 </div>
-                <div className="font-normal text-black mr-3 text-base text-center leading-[normal] whitespace-nowrap flex-1">
-                    입고일
-                </div>
+               
             </div>
         </div>
     );
