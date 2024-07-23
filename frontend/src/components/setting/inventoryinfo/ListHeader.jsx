@@ -1,28 +1,23 @@
 import React from "react";
-import historyIcon from "../../../constants/history/history.image";
 
 const ListHeader = () => {
 	return (
 		<div className=" w-full p-3">
-			<div className=" h-full flex">
-				<div className="flex-1 flex items-center justify-center  border border-solid  border-[#5e5d5d]">
+			<div className=" h-full flex border-b-2 p-1">
+				<div className="flex-1 flex items-center justify-center ">
 					{"어종"}
 				</div>
-				<div className="flex-1 flex items-center justify-center  border border-solid  border-[#4b4949]">
+				<div className="flex-1 flex items-center justify-center ">
 					{"분류"}
 				</div>
-				<div className="flex-1 flex items-center justify-center  border border-solid  border-[#4b4949]">
-					{"알림설"}
-					<br />
-					{"정수량"}
+				<div className="flex-1 flex flex-col items-center justify-center ">
+					<div>{"알림설정"}</div>
+					<div>{"수량"}</div>
 				</div>
-				<div className="flex-1 flex items-center justify-center  border border-solid  border-[#777777]">
-					{"출고가격"}
-					<br />
-					{"(1kg)"}
-				</div>
-				<div className="flex items-center justify-center  border border-solid  border-[#4b4949]">
-					<img src={historyIcon.sortIcon} alt="file-icon" />
+				<div className="flex-1 flex flex-col items-center justify-center ">
+					<div>{"출고가격"}</div>
+
+					<div>{"(1kg)"}</div>
 				</div>
 			</div>
 		</div>

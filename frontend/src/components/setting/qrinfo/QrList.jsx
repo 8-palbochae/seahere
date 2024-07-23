@@ -1,55 +1,33 @@
 import React, { useState } from "react";
 import QrItem from "./QrItem";
 import settingIcon from "../../../constants/setting/setting.image";
-import { Modal } from "antd";
-
 const QrList = () => {
-	const [isModalOpen, setIsModalOpen] = useState(false);
-	const showModal = () => {
-		setIsModalOpen(true);
+	const [checkedCount, setCheckedCount] = useState(0);
+	const handleCheckedChange = (isChecked) => {
+		setCheckedCount((prevCount) =>
+			isChecked ? prevCount + 1 : prevCount - 1
+		);
 	};
-	const handleClose = () => {
-		setIsModalOpen(false);
-	};
-
-	const onClickModalClose = () => {
-		setIsModalOpen(false);
-	};
+	let button;
+	if (checkedCount) {
+		button = (
+			<button className="w-full rounded-[20px] text-white bg-blue-600 p-2">
+				{checkedCount} 이메일로 보내기
+			</button>
+		);
+	}
 	return (
 		<div className="flex flex-col items-center gap-3 w-full  p-2">
-			<Modal
-				title="Qr 이미지 전송"
-				open={isModalOpen}
-				footer={null}
-				maskClosable={true}
-				onCancel={handleClose}
-			>
-				<div className="flex flex-col gap-2">
-					<hr />
-					<button
-						onClick={onClickModalClose}
-						className="bg-gray-300 rounded-[20px] p-2"
-					>
-						{"이메일로 이미지 보내기"}
-					</button>
-					<button
-						onClick={onClickModalClose}
-						className="bg-gray-300 rounded-[20px] p-2 "
-					>
-						{"선택한 이미지 모두 이메일로 보내기"}
-					</button>
-				</div>
-			</Modal>
-			<QrItem qrCode={settingIcon.qrCode} onClick={showModal} />
-			<QrItem qrCode={settingIcon.qrCode} onClick={showModal} />
-			<QrItem qrCode={settingIcon.qrCode} onClick={showModal} />
-			<QrItem qrCode={settingIcon.qrCode} onClick={showModal} />
-			<QrItem qrCode={settingIcon.qrCode} onClick={showModal} />
-			<QrItem qrCode={settingIcon.qrCode} onClick={showModal} />
-			<QrItem qrCode={settingIcon.qrCode} onClick={showModal} />
-			<QrItem qrCode={settingIcon.qrCode} onClick={showModal} />
-			<QrItem qrCode={settingIcon.qrCode} onClick={showModal} />
-			<QrItem qrCode={settingIcon.qrCode} onClick={showModal} />
+			<div className="flex flex-col items-center gap-3 w-full  p-2 overflow-auto max-h-[50vh]">
+				{[...Array(12)].map((_, index) => (
+					<QrItem
+						key={index}
+						qrCode={settingIcon.qrCode}
+						onCheckedChange={handleCheckedChange}
+					/>
+				))}
+			</div>
+			{button}
 		</div>
 	);
 };
