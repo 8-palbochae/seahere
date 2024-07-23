@@ -4,8 +4,8 @@ import background from '../assets/common/background.svg';
 import naver from '../assets/loginSignup/naver.svg';
 import google from '../assets/loginSignup/google.svg';
 import middleLine from '../assets/loginSignup/middle_Line.svg';
-import InputField from '../components/loginSignup/InputField'; // 새로 정의한 InputField 컴포넌트를 가져옵니다
-import SubmitButton from '../components/loginSignup/SubmitButton'; // 새로 정의한 SubmitButton 컴포넌트를 가져옵니다
+import InputField from '../components/loginSignup/itemcomponent/InputField'; // 새로 정의한 InputField 컴포넌트를 가져옵니다
+import SubmitButton from '../components/loginSignup/itemcomponent/SubmitButton'; // 새로 정의한 SubmitButton 컴포넌트를 가져옵니다
 
 const LoginChoice = () => {
 	return (
@@ -40,7 +40,7 @@ const LoginChoice = () => {
 						</div>
 						<div className="absolute w-[222px] h-5 top-32 left-[19px]">
 							<div className="absolute w-[220px] top-0 left-0 [font-family:'Inter-Regular',Helvetica] font-normal text-black text-[15px] text-center tracking-[0] leading-[15px]">
-								<Link to={"/signup-choice"}>email로 시작하기</Link>
+								<Link to={"/signup/choice"}>email로 시작하기</Link>
 							</div>
 						</div>
 					</div>
