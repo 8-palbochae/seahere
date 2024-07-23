@@ -38,7 +38,7 @@ function App() {
 					<Route element={<Layout />}>
 						<Route path="/setting" element={<Setting />}>
 							<Route path="" element={<MainSetting />} />
-							<Route path="user" element={<UserInfoSetting />} />
+							<Route path="user" element={<UserInfoSetting />} /> {/*users */}
 							<Route path="qr" element={<QrInfo />} />
 							<Route
 								path="alarm-history"
@@ -46,56 +46,55 @@ function App() {
 							/>
 							<Route
 								path="password-change"
-								element={<PasswordChange />}
-							/>
-							<Route path="team" element={<TeamInfo />} />
+								element={<PasswordChange />} 
+							/> {/* password */}
+							<Route path="team" element={<TeamInfo />} />{/* teams */}
 							<Route
 								path="inventory"
 								element={<InventorySetting />}
-							/>
-							<Route path="alarm" element={<Alarm />} />
+							/>{/* inventories */}
+							<Route path="alarm" element={<Alarm />} /> {/* alarms */}
 						</Route>
 						<Route path="/main" element={<Main />}>
 							<Route path="" element={<BrokerMain />} />
 						</Route>
-						<Route path="/history" element={<History />} />
-						<Route path="/inventory" element={<InventoryView />} />
+						<Route path="/history" element={<History />} /> {/* histories */}
+						<Route path="/inventory" element={<InventoryView />} /> {/* inventories */}
 
-						<Route path="/trade" element={<Trade />} />
+						<Route path="/trade" element={<Trade />} /> {/* trades */}
 						<Route
 							path="/broker/:id"
 							element={<BrokerDetailPage />}
-						/>
-						<Route path="/cart" element={<Cart />} />
+						/> {/* /brokers/:id */}
+						<Route path="/cart" element={<Cart />} /> {/* carts */}
 
 						<Route path="/incoming" element={<Income />} />
-						<Route path="/outgoing" />
 						<Route
 							path="/outgoingList"
 							element={<OutgoingList />}
-						/>
+						/>{/* /outgoings */}
 						<Route
 							path="/outgoingReqList"
 							element={<OutgoingReqList />}
-						/>
+						/>{/* /outgoings/requests */}
 						<Route
 							path="/incomingList"
 							element={<IncomingList />}
 						/>
-						<Route path="/adjustList" element={<AdjustList />} />
+						<Route path="/adjustList" element={<AdjustList />} /> {/* /adjusts */}
 						<Route
 							path="/alarm-history"
 							element={<AlarmHistory />}
 						/>
 					</Route>
-					<Route path="/" element={<LoginChoice />} h />
-					<Route path="/signup-choice" element={<SignUpChoice />} />
+					<Route path="/" element={<LoginChoice />} /> {/* /login */} 
+					<Route path="/signup-choice" element={<SignUpChoice />} /> {/* /signup/choice */}
 					<Route
 						path="/signup-B-choice"
-						element={<SignUpBrokerChoice />}
-					/>
-					<Route path="/signup-B-info" element={<SignUpBroker />} />
-					<Route path="/signup-info" element={<SignUpInfo />} />
+						element={<SignUpBrokerChoice />} 
+					/>{/* /signup/broker/choice */}
+					<Route path="/signup-B-info" element={<SignUpBroker />} /> {/* /signup/broker */}
+					<Route path="/signup-info" element={<SignUpInfo />} />{/* /signup */}
 				</Routes>
 			</BrowserRouter>
 		</div>
