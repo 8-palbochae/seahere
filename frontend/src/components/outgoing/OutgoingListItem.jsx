@@ -32,13 +32,18 @@ const OutgoingListItem = () => {
     const handleToggle = () => {
         setIsExpanded(prevState => !prevState);
     };
+    const date = '2024-07-10';
 
     return (
         <div className="relative w-full flex flex-col">
+            <div className="text-gray-700 text-base mb-1 border-b border-gray-300 pb-1">
+                {date}
+            </div>
             <div className="relative w-full flex ">
+            
                 <div
                     ref={itemRef}
-                    className={`flex w-full h-[98px] bg-white rounded-[20px] border-[3px] border-solid border-blue-300 items-center px-4 transition-transform duration-300 ease-in-out ${isSwiped ? 'translate-x-[-100px]' : 'translate-x-0'
+                    className={`flex w-full h-[98px] bg-white rounded-[20px] shadow-lg border-solid items-center px-4 transition-transform duration-300 ease-in-out ${isSwiped ? 'translate-x-[-100px]' : 'translate-x-0'
                         }`}
                     onTouchStart={handleTouchStart}
                     onTouchMove={handleTouchMove}
@@ -46,21 +51,18 @@ const OutgoingListItem = () => {
                     onMouseDown={handleMouseDown}
                     onClick={handleToggle}
                 >
+                    
                     <div className="flex-1 flex justify-center items-center">
                         <div className="w-[69px] text-center font-normal text-black text-base leading-[normal]">
                             스파로스
                         </div>
                     </div>
                     <div className="flex-1 flex justify-center items-center">
-                        <div className="w-[73px] text-center font-normal text-black text-base leading-[normal]">
+                        <div className="w-[90px] text-center font-normal text-black text-base leading-[normal]">
                             넙치 외 3건
                         </div>
                     </div>
-                    <div className="flex-1 flex justify-center items-center">
-                        <div className="w-[73px] text-center font-normal text-black text-base leading-[normal]">
-                            2024-07-10<br />06:00:03
-                        </div>
-                    </div>
+                    
                     <div className="flex-1 flex justify-center items-center">
                         <div className="w-[70px] text-center font-normal text-black text-base leading-[normal]">
                             출고 대기
