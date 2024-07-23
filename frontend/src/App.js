@@ -20,6 +20,7 @@ import {
 	PasswordChange,
 	TeamInfo,
 	InventorySetting,
+	Alarm,
 } from "./components/setting";
 import {
 	SignUpChoice,
@@ -27,16 +28,16 @@ import {
 	SignUpBrokerChoice,
 	SignUpInfo,
 } from "./components/login_signup";
-import OutgoingList from "./components/history/outgoing/page/OutgoingList.jsx";
-import History from "./components/history/main/page/History.jsx";
-import OutgoingReqList from "./components/history/outgoing/page/OutgoingReqList.jsx";
-import Alarm from "./components/setting/alarm/Alarm";
-import IncomingList from "./components/history/incoming/page/IncomingList.jsx";
-import AdjustList from "./components/history/adjust/page/AdjustList.jsx";
+import {
+	History,
+	OutgoingList,
+	IncomingList,
+	OutgoingReqList,
+	AdjustList,
+} from "./components/history";
+import { TradeMain, TradeBrokerMain } from "./components/trade";
 import AlarmHistory from "./components/common/header/AlarmHistory";
 import BrokerMain from "./components/main/broker/BrokerMain";
-import TradeMain from "./components/trade/TradeMain";
-import TradeBrokerMain from "./components/trade/TradeBrokerMain";
 
 function App() {
 	return (

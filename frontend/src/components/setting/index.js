@@ -4,3 +4,4 @@ export { default as PasswordChange } from "./userinfo/password_change/PasswordCh
 export { default as TeamInfo } from "./teaminfo/TeamInfo";
 export { default as InventorySetting } from "./inventoryinfo/InventorySetting";
 export { default as MainSetting } from "./main/MainSetting";
+export { default as Alarm } from "./alarm/Alarm";
