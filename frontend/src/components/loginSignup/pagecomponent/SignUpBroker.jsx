@@ -6,10 +6,10 @@ import MainLogo from '../../../assets/common/MainLogo.svg';
 import background from '../../../assets/common/background.svg';
 import back from '../../../assets/loginSignup/backbutton.svg';
 import camera from '../../../assets/loginSignup/camera.svg';
-import Background from '../../../components/loginSignup/itemcomponent/Background';
-import InputField from '../../../components/loginSignup/itemcomponent/InputField';
-import SubmitButton from '../../../components/loginSignup/itemcomponent/SubmitButton';
-import BrokerCheckModal from '../../../components/loginSignup/itemcomponent/BrokerCheckModal';
+import Background from '../../../components/loginsignup/itemcomponent/Background';
+import InputField from '../../../components/loginsignup/itemcomponent/InputField';
+import SubmitButton from '../../../components/loginsignup/itemcomponent/SubmitButton';
+import BrokerCheckModal from '../../../components/loginsignup/itemcomponent/BrokerCheckModal';
 
 dayjs.extend(customParseFormat);
 
