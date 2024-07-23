@@ -4,7 +4,7 @@ import { ReactComponent as Sort } from '../../assets/history/sort-icon.svg';
 const OutgoingListHeader = () => {
     return (
         <div className="relative w-full h-[41px]">
-            <div className="w-full h-full bg-white border border-solid border-[#d9d9d9] flex">
+            <div className="w-full h-full bg-white border border-solid border-[#d9d9d9] flex ">
                 <div className="flex-1 flex items-center justify-center font-normal text-black text-base leading-[normal] whitespace-nowrap">
                     요청자
                 </div>
