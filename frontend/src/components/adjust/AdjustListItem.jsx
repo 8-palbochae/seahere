@@ -1,39 +1,39 @@
 import React from 'react';
 import nupchiIcon from '../../assets/history/nupchi-icon.png';
 
-const AdjustListItem = () => {
+const IncomingListItem = () => {
+    // 날짜 데이터 예시
+    const date = '2024-07-10';
     return (
-        <div className="w-full px-2">
-            <div className="relative w-full bg-blue-300 rounded-[10px] shadow-lg px-4 py-4 overflow-hidden flex items-center">
-                <div className="relative flex items-center mr-2"> 
-                    <img className="w-[60px] h-[60px] object-cover relative bottom-4" alt="Image" src={nupchiIcon} />
-                    <div className="absolute top-[60%] left-0 right-0 text-center text-black font-normal text-base rounded-md px-2 py-1 bg-white bg-opacity-100">
+        <div className="w-full px-2 my-2">
+            <div className="text-gray-700 text-base mb-1 border-b border-gray-300 pb-1">
+                {date}
+            </div>
+            <div className="flex w-full bg-white rounded-lg shadow-xl px-3 py-2 items-center justify-between">
+                <div className="flex flex-col items-center mr-3 w-1/4 p-2">
+                    <div className="w-20 h-20 mb-1">  
+                        <img className="w-full h-full object-cover" alt="Image" src={nupchiIcon} />
+                    </div>
+                    <div className="text-center text-black text-base font-bold truncate w-full">
                         넙치
                     </div>
                 </div>
                 <div className="text-center flex-1">
-                    <div className="text-black font-normal text-base">
+                    <div className="text-black font-normal text-base mr-8">
                         활어
                     </div>
                 </div>
-                <div className="text-center flex-1 mr-2">
-                    <div className="text-black font-normal text-base">
-                    10 &rarr; 5
-                    </div>
+                <div className="text-center flex-1 text-blue-600 text-base font-bold">
+                    <span className='text-black font-normal mr-10'> 10 &rarr; 5</span>
                 </div>
-                <div className="text-center flex-1 mr-2">
-                    <div className="text-black font-normal text-base">
-                        1500 &rarr; 2000 
-                    </div>
-                </div>
-                <div className="text-center flex-1">
-                    <div className="text-black font-normal text-base">
-                        2024-07-12/12:23:00
-                    </div>
-                </div>
+                <div className="flex justify-center mt-2">
+                <span className="text-black font-normal inline-block text-center mr-5">
+                    1500<br />↓<br />2000
+                </span>
+            </div>
             </div>
         </div>
     );
 };
 
-export default AdjustListItem;
+export default IncomingListItem;
