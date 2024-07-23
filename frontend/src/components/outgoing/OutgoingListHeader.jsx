@@ -11,15 +11,11 @@ const OutgoingListHeader = () => {
                 <div className="flex-1 flex items-center justify-center font-normal text-black text-base leading-[normal] whitespace-nowrap">
                     제목
                 </div>
-                <div className="flex-1 flex items-center justify-center font-normal text-black text-base leading-[normal] whitespace-nowrap">
-                    날짜
-                </div>
+                
                 <div className="flex-1 flex items-center justify-center font-normal text-black text-base leading-[normal] whitespace-nowrap">
                     상태
                 </div>
-                <div className="flex items-center justify-center">
-                    <Sort className="w-6 h-6 ml-2" />
-                </div>
+                
             </div>
         </div>
     );
