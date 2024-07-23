@@ -38,63 +38,81 @@ function App() {
 					<Route element={<Layout />}>
 						<Route path="/setting" element={<Setting />}>
 							<Route path="" element={<MainSetting />} />
-							<Route path="user" element={<UserInfoSetting />} /> {/*users */}
+							<Route path="users" element={<UserInfoSetting />} />
 							<Route path="qr" element={<QrInfo />} />
 							<Route
 								path="alarm-history"
 								element={<AlarmHistory />}
 							/>
 							<Route
-								path="password-change"
-								element={<PasswordChange />} 
-							/> {/* password */}
-							<Route path="team" element={<TeamInfo />} />{/* teams */}
+								path="password"
+								element={<PasswordChange />}
+							/>
+							<Route path="teams" element={<TeamInfo />} />
 							<Route
-								path="inventory"
+								path="inventories"
 								element={<InventorySetting />}
-							/>{/* inventories */}
-							<Route path="alarm" element={<Alarm />} /> {/* alarms */}
+							/>
+							<Route path="alarms" element={<Alarm />} />{" "}
 						</Route>
 						<Route path="/main" element={<Main />}>
 							<Route path="" element={<BrokerMain />} />
 						</Route>
-						<Route path="/history" element={<History />} /> {/* histories */}
-						<Route path="/inventory" element={<InventoryView />} /> {/* inventories */}
-
-						<Route path="/trade" element={<Trade />} /> {/* trades */}
+						<Route path="/history" element={<History />} />{" "}
+						{/* histories */}
+						<Route
+							path="/inventory"
+							element={<InventoryView />}
+						/>{" "}
+						{/* inventories */}
+						<Route path="/trade" element={<Trade />} />{" "}
+						{/* trades */}
 						<Route
 							path="/broker/:id"
 							element={<BrokerDetailPage />}
-						/> {/* /brokers/:id */}
+						/>{" "}
+						{/* /brokers/:id */}
 						<Route path="/cart" element={<Cart />} /> {/* carts */}
-
 						<Route path="/incoming" element={<Income />} />
 						<Route
 							path="/outgoingList"
 							element={<OutgoingList />}
-						/>{/* /outgoings */}
+						/>
+						{/* /outgoings */}
 						<Route
 							path="/outgoingReqList"
 							element={<OutgoingReqList />}
-						/>{/* /outgoings/requests */}
+						/>
+						{/* /outgoings/requests */}
 						<Route
 							path="/incomingList"
 							element={<IncomingList />}
 						/>
-						<Route path="/adjustList" element={<AdjustList />} /> {/* /adjusts */}
+						<Route path="/adjustList" element={<AdjustList />} />{" "}
+						{/* /adjusts */}
 						<Route
 							path="/alarm-history"
 							element={<AlarmHistory />}
 						/>
 					</Route>
-					<Route path="/" element={<LoginChoice />} /> {/* /login */} 
-					<Route path="/signup-choice" element={<SignUpChoice />} /> {/* /signup/choice */}
+					<Route path="/" element={<LoginChoice />} /> {/* /login */}
+					<Route
+						path="/signup-choice"
+						element={<SignUpChoice />}
+					/>{" "}
+					{/* /signup/choice */}
 					<Route
 						path="/signup-B-choice"
-						element={<SignUpBrokerChoice />} 
-					/>{/* /signup/broker/choice */}
-					<Route path="/signup-B-info" element={<SignUpBroker />} /> {/* /signup/broker */}
-					<Route path="/signup-info" element={<SignUpInfo />} />{/* /signup */}
+						element={<SignUpBrokerChoice />}
+					/>
+					{/* /signup/broker/choice */}
+					<Route
+						path="/signup-B-info"
+						element={<SignUpBroker />}
+					/>{" "}
+					{/* /signup/broker */}
+					<Route path="/signup-info" element={<SignUpInfo />} />
+					{/* /signup */}
 				</Routes>
 			</BrowserRouter>
 		</div>

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const UserInfo = () => {
 	const navigate = useNavigate();
 	const onClick = () => {
-		navigate("/setting/user");
+		navigate("/setting/users");
 	};
 	return (
 		<>
