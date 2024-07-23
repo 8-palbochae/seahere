@@ -8,10 +8,7 @@ const FindPasswordModal = () => {
   };
 
   return (
-    <div className="w-96 mx-auto p-5 border rounded-lg bg-white shadow-lg">
-      <div className="text-center border-b pb-2 mb-5">
-        <span className="text-gray-500">ID / 비밀번호 찾기</span>
-      </div>
+    <div className="w-96 mx-auto p-5 bg-white rounded-lg shadow-lg">
       <div className="flex justify-around mb-5 border-b">
         <span
           className={`cursor-pointer py-2 px-4 ${activeTab === 'id' ? 'text-black border-b-2 border-black' : 'text-gray-400'}`}

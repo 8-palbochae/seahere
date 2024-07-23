@@ -1,8 +1,8 @@
-import MainLogo from '../../assets/common/MainLogo.svg';
-import background from '../../assets/common/background.svg';
-import back from '../../assets/loginSignup/backbutton.svg';
-import ChoiceBox from '../../components/loginSignup/itemcomponent/ChoiceBox';
-import Background from '../../components/loginSignup/itemcomponent/Background';
+import MainLogo from '../../../assets/common/MainLogo.svg';
+import background from '../../../assets/common/background.svg';
+import back from '../../../assets/loginSignup/backbutton.svg';
+import ChoiceBox from '../../../components/loginsignup/itemcomponent/ChoiceBox';
+import Background from '../../../components/loginsignup/itemcomponent/Background';
 
 const SignUpChoice = () => {
   return (

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import DaumPostcode from 'react-daum-postcode';
-import MainLogo from '../../assets/common/MainLogo.svg';
-import background from '../../assets/common/background.svg';
-import back from '../../assets/loginSignup/backbutton.svg';
-import Background from '../../components/loginSignup/itemcomponent/Background';
-import InputField from '../../components/loginSignup/itemcomponent/InputField';
-import SubmitButton from '../../components/loginSignup/itemcomponent/SubmitButton';
+import MainLogo from '../../../assets/common/MainLogo.svg';
+import background from '../../../assets/common/background.svg';
+import back from '../../../assets/loginSignup/backbutton.svg';
+import Background from '../../../components/loginsignup/itemcomponent/Background';
+import InputField from '../../../components/loginsignup/itemcomponent/InputField';
+import SubmitButton from '../../../components/loginsignup/itemcomponent/SubmitButton';
 
 const SignUpInfo = () => {
   const [isPostcodeOpen, setIsPostcodeOpen] = useState(false);

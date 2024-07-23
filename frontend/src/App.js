@@ -100,7 +100,6 @@ function App() {
 						<Route path="choice" element={<SignUpChoice />} /> {/* /signup/choice */}
 						<Route path="broker-choice" element={<SignUpBrokerChoice />} /> {/* /signup/broker-choice */}
 					</Route> {/* /signup */}
-
 				</Routes>
 			</BrowserRouter>
 		</div>
