@@ -1,14 +1,18 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import LoginChoice from "./pages/LoginChoice";
-import Layout from "./pages/layout/Layout";
-import Setting from "./pages/Setting";
-import Main from "./pages/Main";
-import History from "./components/history/main/page/History.jsx";
-import InventoryView from "./pages/InventoryView";
-import Income from "./pages/Income";
-import SignUp from "./pages/SignUp.jsx";
+import {
+	LoginChoice,
+	Layout,
+	Setting,
+	Main,
+	InventoryView,
+	Income,
+	SignUp,
+	HistoryOutlet,
+	TradeView,
+	Cart,
+} from "./pages";
 import {
 	MainSetting,
 	UserInfoSetting,
@@ -17,23 +21,22 @@ import {
 	TeamInfo,
 	InventorySetting,
 } from "./components/setting";
-import SignUpChoice from "./components/login_signup/pagecomponent/SignUpChoice.jsx";
-import SignUpBroker from "./components/login_signup/pagecomponent/SignUpBroker.jsx";
-import SignUpBrokerChoice from "./components/login_signup/pagecomponent/SignUpBrokerChoice.jsx";
-import SignUpInfo from "./components/login_signup/pagecomponent/SignUpInfo.jsx";
+import {
+	SignUpChoice,
+	SignUpBroker,
+	SignUpBrokerChoice,
+	SignUpInfo,
+} from "./components/login_signup";
 import OutgoingList from "./components/history/outgoing/page/OutgoingList.jsx";
-
+import History from "./components/history/main/page/History.jsx";
 import OutgoingReqList from "./components/history/outgoing/page/OutgoingReqList.jsx";
 import Alarm from "./components/setting/alarm/Alarm";
 import IncomingList from "./components/history/incoming/page/IncomingList.jsx";
 import AdjustList from "./components/history/adjust/page/AdjustList.jsx";
 import AlarmHistory from "./components/common/header/AlarmHistory";
-import Cart from "./pages/Cart";
 import BrokerMain from "./components/main/broker/BrokerMain";
 import TradeMain from "./components/trade/TradeMain";
-import TradeView from "./pages/TradeView";
 import TradeBrokerMain from "./components/trade/TradeBrokerMain";
-import HistoryOutlet from "./pages/HistoryOutlet.jsx";
 
 function App() {
 	return (
