@@ -20,7 +20,7 @@ const EmployeeList = () => {
 			>
 				<div className="flex flex-col gap-3">
 					<hr />
-					<button className="text-red-600 bg-blue-300 p-2 rounded-[20px]">
+					<button className="text-white bg-blue-600 p-2 rounded-[20px]">
 						{"멤버 삭제"}
 					</button>
 				</div>
