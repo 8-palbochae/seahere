@@ -1,6 +1,6 @@
 import MainLogo from '../../../assets/common/MainLogo.svg';
 import background from '../../../assets/common/background.svg';
-import back from '../../../assets/loginsignup/backbutton.svg';
+import back from '../../../assets/login_signup/backbutton.svg';
 import ChoiceBox from '../itemcomponent/ChoiceBox';
 import Background from '../itemcomponent/Background';
 
