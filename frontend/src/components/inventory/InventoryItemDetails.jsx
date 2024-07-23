@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import useInventorySlide from '../../hooks/inventory/useInventorySlide';
 import { iventoryIcon } from '../../constants/iventory/iventory.image';
 import InventoryEditModal from './InventoryEditModal';
@@ -24,7 +25,7 @@ const InventoryItemDetails = () => {
 
     return (
         <div
-            className="relative w-full p-3 border-t border-gray-200 overflow-hidden"
+            className="relative w-full p-3 border-t border-gray-200 overflow-hidden cursor-pointer"
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onMouseDown={handleMouseDown}
@@ -72,6 +73,10 @@ const InventoryItemDetails = () => {
             />
         </div>
     );
+};
+
+InventoryItemDetails.propTypes = {
+    item: PropTypes.number.isRequired,
 };
 
 export default InventoryItemDetails;
