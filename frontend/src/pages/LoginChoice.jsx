@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import MainLogo from '../assets/common/MainLogo.svg';
-import background from '../assets/common/background.svg';
-import naver from '../assets/loginsignup/naver.svg';
-import google from '../assets/loginsignup/google.svg';
-import middleLine from '../assets/loginsignup/middle_Line.svg';
-import InputField from '../components/loginsignup/itemcomponent/InputField';
-import SubmitButton from '../components/loginsignup/itemcomponent/SubmitButton';
-import FindPasswordModal from '../components/loginsignup/itemcomponent/FindPasswordModal'; // FindPasswordModal 컴포넌트 가져오기
+import MainLogo from "../assets/common/MainLogo.svg";
+import background from "../assets/common/background.svg";
+import naver from "../assets/login_signup/naver.svg";
+import google from "../assets/login_signup/google.svg";
+import middleLine from "../assets/login_signup/middle_Line.svg";
+import InputField from "../components/login_signup/itemcomponent/InputField";
+import SubmitButton from "../components/login_signup/itemcomponent/SubmitButton";
+import FindPasswordModal from "../components/login_signup/itemcomponent/FindPasswordModal"; // FindPasswordModal 컴포넌트 가져오기
 
 const LoginChoice = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
@@ -52,16 +52,26 @@ const LoginChoice = () => {
 						</div>
 						<div className="absolute w-[222px] h-5 top-32 left-[19px]">
 							<div className="absolute w-[220px] top-0 left-0 [font-family:'Inter-Regular',Helvetica] font-normal text-black text-[15px] text-center tracking-[0] leading-[15px]">
-								<Link to={"/signup/choice"}>email로 시작하기</Link>
+								<Link to={"/signup/choice"}>
+									email로 시작하기
+								</Link>
 							</div>
 						</div>
 					</div>
 					<form className="absolute w-[276px] h-[207px] top-0 left-[62px]">
 						<div className="top-0 absolute w-[273px] h-[52px] left-0.5">
-							<InputField type="text" name="email" placeholder="이메일" />
+							<InputField
+								type="text"
+								name="email"
+								placeholder="이메일"
+							/>
 						</div>
 						<div className="top-[66px] absolute w-[273px] h-[52px] left-0.5">
-							<InputField type="password" name="password" placeholder="비밀번호" />
+							<InputField
+								type="password"
+								name="password"
+								placeholder="비밀번호"
+							/>
 						</div>
 						<div className="absolute w-[276px] h-[49px] top-[132px] left-0">
 							<SubmitButton>시작하기</SubmitButton>

@@ -9,10 +9,10 @@ import History from "./pages/History";
 import InventoryView from "./pages/InventoryView";
 import Income from "./pages/Income";
 import SignUp from "./pages/SignUp.jsx";
-import SignUpChoice from "./components/loginsignup/pagecomponent/SignUpChoice.jsx";
-import SignUpBroker from "./components/loginsignup/pagecomponent/SignUpBroker.jsx";
-import SignUpBrokerChoice from "./components/loginsignup/pagecomponent/SignUpBrokerChoice.jsx";
-import SignUpInfo from "./components/loginsignup/pagecomponent/SignUpInfo.jsx";
+import SignUpChoice from "./components/login_signup/pagecomponent/SignUpChoice.jsx";
+import SignUpBroker from "./components/login_signup/pagecomponent/SignUpBroker.jsx";
+import SignUpBrokerChoice from "./components/login_signup/pagecomponent/SignUpBrokerChoice.jsx";
+import SignUpInfo from "./components/login_signup/pagecomponent/SignUpInfo.jsx";
 import MainSetting from "./components/setting/main/MainSetting";
 import OutgoingList from "./pages/OutgoingList";
 import QrInfo from "./components/setting/qrinfo/QrInfo";
@@ -28,9 +28,9 @@ import AdjustList from "./pages/AdjustList";
 import AlarmHistory from "./components/common/header/AlarmHistory";
 import Cart from "./pages/Cart";
 import BrokerMain from "./components/main/broker/BrokerMain";
-import TradeMain from './components/trade/TradeMain';
-import TradeView from './pages/TradeView';
-import TradeBrokerMain from './components/trade/TradeBrokerMain';
+import TradeMain from "./components/trade/TradeMain";
+import TradeView from "./pages/TradeView";
+import TradeBrokerMain from "./components/trade/TradeBrokerMain";
 
 function App() {
 	return (
@@ -62,16 +62,19 @@ function App() {
 						</Route>
 						<Route path="/history" element={<History />} />
 						{/* histories */}
-						<Route path="/inventories" element={<InventoryView />} />
+						<Route
+							path="/inventories"
+							element={<InventoryView />}
+						/>
 						{/* inventories */}
-						
 						<Route path="/trades" element={<TradeView />}>
 							<Route path="" element={<TradeMain />} />
-							<Route path="broker/:id" element={<TradeBrokerMain/>}/>
+							<Route
+								path="broker/:id"
+								element={<TradeBrokerMain />}
+							/>
 						</Route>
-
 						<Route path="/cart" element={<Cart />} /> {/* carts */}
-
 						<Route path="/incoming" element={<Income />} />
 						<Route
 							path="/outgoingList"
@@ -94,13 +97,20 @@ function App() {
 							element={<AlarmHistory />}
 						/>
 					</Route>
-					<Route path="/login" element={<LoginChoice />} /> {/* /login */} 
+					<Route path="/login" element={<LoginChoice />} />{" "}
+					{/* /login */}
 					<Route path="/signup" element={<SignUp />}>
-						<Route path="" element={<SignUpInfo />} /> 
-						<Route path="broker" element={<SignUpBroker />} /> 
-						<Route path="choice" element={<SignUpChoice />} /> {/* /signup/choice */}
-						<Route path="broker-choice" element={<SignUpBrokerChoice />} /> {/* /signup/broker-choice */}
-					</Route> {/* /signup */}
+						<Route path="" element={<SignUpInfo />} />
+						<Route path="broker" element={<SignUpBroker />} />
+						<Route path="choice" element={<SignUpChoice />} />{" "}
+						{/* /signup/choice */}
+						<Route
+							path="broker-choice"
+							element={<SignUpBrokerChoice />}
+						/>{" "}
+						{/* /signup/broker-choice */}
+					</Route>{" "}
+					{/* /signup */}
 				</Routes>
 			</BrowserRouter>
 		</div>
