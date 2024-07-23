@@ -19,14 +19,14 @@ const IncomingListItem = () => {
                     </div>
                 </div>
                 <div className="text-center flex-1">
-                    <div className="text-black font-normal text-base">
+                    <div className="text-black font-normal text-base mr-4">
                         활어
                     </div>
                 </div>
                 <div className="text-center flex-1 text-blue-600 text-base font-bold">
                     10<span className='text-black font-normal'> Kg</span>
                 </div>
-                <div className="text-center flex-1 text-black font-normal text-base">
+                <div className="text-center flex-1 text-black font-normal text-base mr-2">
                     {"1500"} <span className=''>원</span>
                 </div>
             </div>

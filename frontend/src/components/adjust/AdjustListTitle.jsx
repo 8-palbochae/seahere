@@ -18,9 +18,7 @@ const AdjustListTitle = () => {
                 <br />
                 변동
             </div>
-            <div className="font-normal text-black mr-3 text-base text-center leading-[normal] whitespace-nowrap flex-1">
-                조정일
-            </div>
+            
         </div>
     </div>
     );
