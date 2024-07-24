@@ -31,14 +31,14 @@ const InventoryEditModal = ({ isOpen, onClose }) => {
                         <Select
                             className='w-5/6'
                             showSearch
-                            placeholder="원산지"
+                            placeholder="수정 사유"
                             optionFilterProp="label"
                             options={editOption}
                         />
                     </div>
                     <div className='flex flex-col w-full justify-center items-center'>
                         <div className='flex items-center w-5/6 mb-4  pb-3'>
-                            <label className='w-1/2 text-left pr-4'>원산지</label>
+                            <label className='w-1/2 text-left pr-4'>입고량</label>
                             <input className='border p-2 flex-grow rounded-xl w-full' />
                         </div>
                         <div className='flex items-center w-5/6 mb-4'>
