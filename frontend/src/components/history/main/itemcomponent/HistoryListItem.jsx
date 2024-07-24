@@ -10,9 +10,9 @@ const HistoryListItem = ({ type }) => {
     
     // 아이콘 매핑 객체
     const iconMap = {
-        출고: <Outgoing className="w-full h-full object-cover fill-red-600" style={{ marginLeft: '20px', marginTop: '2px' }} />,
-        입고: <Incoming className="w-full h-full object-cover fill-blue-600" style={{ marginLeft: '20px', marginTop: '2px' }} />,
-        조정: <Adjust className="w-full h-full object-cover fill-green-600" style={{ marginLeft: '20px', marginTop: '2px' }} />,
+        출고: <Outgoing className="w-full h-full object-cover fill-red-600"  />,
+        입고: <Incoming className="w-full h-full object-cover fill-blue-600"  />,
+        조정: <Adjust className="w-full h-full object-cover fill-green-600"  />,
     };
 
     const typeColor = {
@@ -24,21 +24,19 @@ const HistoryListItem = ({ type }) => {
     const icon = iconMap[type];
 
     return (
-        <div className='flex flex-col text-green justify-center items-center w-full gap-3 mb-1 
-        shadow-lg rounded-lg p-4 bg-white border-t-2 border-gray-200' onClick={() => handleNavigation(type)}>
-            <div className='w-11/12 mx-3 text-left text-gray-400'>
-                {dayjs().format('YYYY-MM-DD')}
-            </div>
-            <div className='flex w-full justify-between'>
-                <div className='flex gap-10 items-center'>
-                    <div className='w-12 h-12'>
+        <div className='flex flex-col w-full mb-1 shadow-md rounded-lg py-4 px-3 bg-white text-center' onClick={() => handleNavigation(type)}>
+            <div className='flex w-full items-center justify-around text-center'>
+                <div>
+                    <div className='w-9 h-9'>
                         {icon}
+                        
                     </div>
-                    <span className={`font-bold text-lg ${typeColor[type]}`}>{type}</span>
+                   
                 </div>
-                <div className='flex justify-around items-center gap-5'>
-                    <div className='text-lg text-gray-600 font-semibold'>5품목</div>
-                    <div className='text-lg text-gray-600 font-semibold'>16개</div>
+                <div className=''>
+                    <div className={`font-bold text-xl ${typeColor[type]}`}>{type}</div>
+                    <span className='text-gray-500 text-md font-semibold'>{'5건'}</span>
+                    
                 </div>
             </div>
         </div>
