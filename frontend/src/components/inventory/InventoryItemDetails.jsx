@@ -38,11 +38,14 @@ const InventoryItemDetails = () => {
                     style={{ flex: '1 0 auto', width: 'calc(100% - 140px)' }} // Adjust width to fit the buttons container
                 >
                     <div className="flex justify-around items-center mb-2">
-                        <span className="w-1/6 text-sm font-medium truncate text-center">활어</span>
-                        <span className="w-1/6 text-sm truncate text-center">국산</span>
-                        <span className="w-1/6 text-sm font-semibold truncate text-center">{"100->20"}</span>
+                        <span className="w-1/6 text-sm font-medium truncate text-center">국산</span>
+                        <span className="w-1/6 text-sm truncate text-center">자연산</span>
+                        <span className="w-1/6 text-sm font-semibold truncate text-center text-blue-600">{100}
+                            <span className='text-black'> Kg</span>
+                        </span>
                         <span className="w-2/6 text-sm truncate overflow-hidden text-ellipsis text-center" title="10000000000000000원">
-                            1000000000
+                            100,000
+                            <span className='text-black'> 원</span>
                         </span>
                         <span className="w-1/6 text-xs truncate text-red-500 border-2 rounded-full items-center text-center p-1">{"+3일"}</span>
                     </div>
