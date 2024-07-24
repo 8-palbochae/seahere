@@ -1,19 +1,15 @@
 import React from 'react';
 import HistoryListItem from './HistoryListItem';
+import HistoryListRow from './HistoryListRow';
 const HistoryList = () => {
     return (
-        <div className='flex justify-center w-full' >
-            <div className='flex flex-col gap-1 w-full mx-3'>
-                <div className='w-full'>
-                    <HistoryListItem type={"출고"}/>
-                </div>
-                <div>
-                    <HistoryListItem type={"입고"}/>
-                </div>
-                <div>
-                    <HistoryListItem type={"조정"}/>
-                </div>
-            </div>
+        <div className='flex  flex-col justify-center w-full px-4' >
+           <HistoryListRow/>
+           <HistoryListRow/>
+           <HistoryListRow/>
+           <HistoryListRow/>
+           <HistoryListRow/>
+           <HistoryListRow/>
         </div> 
     );
 };
