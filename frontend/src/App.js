@@ -77,12 +77,12 @@ function App() {
 								path="incomingList"
 								element={<IncomingList />}
 							/>
-							<Route
-								path="outgoings/requests"
-								element={<OutgoingReqList />}
-							/>
 							<Route path="adjusts" element={<AdjustList />} />
 						</Route>
+						<Route
+							path="outgoings/requests"
+							element={<OutgoingReqList />}
+						/>
 						<Route
 							path="/inventories"
 							element={<InventoryView />}

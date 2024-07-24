@@ -1,8 +1,16 @@
 import React from "react";
 import MainImage from "../../../constants/main/main.image";
+import { useNavigate } from "react-router-dom";
 const OutgoingReq = () => {
+	const navigate = useNavigate();
+	const onClick = () => {
+		navigate("/outgoings/requests");
+	};
 	return (
-		<div className="flex  rounded-[10px] shadow-lg w-full p-3 self-center">
+		<div
+			className="flex  rounded-[10px] shadow-lg w-full p-3 self-center"
+			onClick={onClick}
+		>
 			<div>
 				<img src={MainImage.outgoingIcon} />
 			</div>
