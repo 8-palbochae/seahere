@@ -9,11 +9,7 @@ dayjs.extend(customParseFormat);
 const { RangePicker } = DatePicker;
 const dateFormat = "YYYY-MM-DD";
 
-const PeriodStart = () => {
-	const [startDate, setStartDate] = useState();
-	useEffect(() => {
-		console.log(startDate);
-	}, [startDate]);
+const PeriodStart = ({ setStartDate }) => {
 	const handleStartChange = (date) => {
 		setStartDate(dayjs(date).format(dateFormat));
 	};

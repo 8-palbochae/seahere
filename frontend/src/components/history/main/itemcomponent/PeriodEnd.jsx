@@ -8,13 +8,7 @@ dayjs.extend(customParseFormat);
 const { RangePicker } = DatePicker;
 const dateFormat = "YYYY-MM-DD";
 
-const PeriodEnd = () => {
-	const [endDate, setEndDate] = useState();
-
-	useEffect(() => {
-		console.log(endDate);
-	}, [endDate]);
-
+const PeriodEnd = ({ setEndDate }) => {
 	const handleStartChange = (date) => {
 		setEndDate(dayjs(date).format(dateFormat));
 	};

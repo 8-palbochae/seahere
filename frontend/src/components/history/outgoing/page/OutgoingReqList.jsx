@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import OutgoingReqListComponent from "../itemcomponent/OutgoingReqListComponent";
 import SearchInputFilter from "../../../common/SearchInputFilter";
 import { getOutgoingReqList } from "../../../../api/outgoing/outgoingApi";
@@ -8,7 +8,11 @@ const OutgoingReqList = () => {
 	const [startDate, setStartDate] = useState();
 	const [endDate, setEndDate] = useState();
 	const [search, setSearch] = useState();
-	console.log(startDate, endDate, search);
+	useEffect(() => {
+		console.log(startDate);
+		console.log(endDate);
+		console.log(search);
+	});
 	const { data, isPending, isError, error } = useQuery({
 		queryKey: ["outgoingReqList"],
 		queryFn: getOutgoingReqList,
@@ -23,7 +27,6 @@ const OutgoingReqList = () => {
 		<div>
 			<div>
 				<SearchInputFilter setSearch={setSearch} />
-
 				<OutgoingReqListComponent
 					data={data}
 					setStartDate={setStartDate}
