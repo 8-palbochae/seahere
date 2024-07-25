@@ -20,19 +20,18 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { iventoryIcon } from '../../constants/iventory/iventory.image';
 import { getProductList } from '../../api/incoming/incomingApi';
+import { useQuery } from '@tanstack/react-query';
 
 const SearchInput = () => {
+    let {data, isPending, isError, error}  = useQuery({
+        queryKey : ["productList"],
+        queryFn : getProductList
+    });
     const [query, setQuery] = useState('');
     const [suggestions, setSuggestions] = useState([]);
-    const [data, setData] = useState([]);
-
+    
     useEffect(() => {
-        setData(getProductList());
-        
-    }, []);
-
-    console.log(data);
-    useEffect(() => {
+        if(!isPending){
         if (query.length > 0) {
             // Filter the data based on the query
             const filteredSuggestions = data.filter(item =>
@@ -42,6 +41,8 @@ const SearchInput = () => {
         } else {
             setSuggestions([]);
         }
+    }
+    
     }, [query, data]);
 
     return (
