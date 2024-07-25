@@ -68,7 +68,7 @@ public class UserEntity {
         this.refreshToken = updateRefreshToken;
     }
 
-    public static UserEntity from(SignupReq signupReq,PasswordEncoder passwordEncoder){
+    public static UserEntity from(SignupReq signupReq){
         return UserEntity.builder()
                 .email(signupReq.getEmail())
                 .password(signupReq.getPassword())
