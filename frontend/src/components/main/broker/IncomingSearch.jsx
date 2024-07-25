@@ -10,7 +10,7 @@ const IncomingSearch = () => {
 				</div>
 				<div>입고</div>
 			</div>
-			<SearchInput />
+			<SearchInput value="incoming"/>
 		</div>
 	);
 };
