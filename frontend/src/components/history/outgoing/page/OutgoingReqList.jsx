@@ -5,7 +5,10 @@ import { getOutgoingReqList } from "../../../../api/outgoing/outgoingApi";
 import { useQuery } from "@tanstack/react-query";
 
 const OutgoingReqList = () => {
-	// const [startDate, setStartDate] =
+	const [startDate, setStartDate] = useState();
+	const [endDate, setEndDate] = useState();
+	const [search, setSearch] = useState();
+	console.log(startDate, endDate, search);
 	const { data, isPending, isError, error } = useQuery({
 		queryKey: ["outgoingReqList"],
 		queryFn: getOutgoingReqList,
@@ -19,9 +22,13 @@ const OutgoingReqList = () => {
 	return (
 		<div>
 			<div>
-				<SearchInputFilter />
+				<SearchInputFilter setSearch={setSearch} />
 
-				<OutgoingReqListComponent data={data} />
+				<OutgoingReqListComponent
+					data={data}
+					setStartDate={setStartDate}
+					setEndDate={setEndDate}
+				/>
 			</div>
 		</div>
 	);
