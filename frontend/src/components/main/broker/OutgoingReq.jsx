@@ -1,9 +1,11 @@
 import React from "react";
 import MainImage from "../../../constants/main/main.image";
 import { useNavigate } from "react-router-dom";
+import { getOutgoingReqList } from "../../../api/outgoing/outgoingApi";
 const OutgoingReq = () => {
 	const navigate = useNavigate();
 	const onClick = () => {
+		getOutgoingReqList();
 		navigate("/main/outgoings");
 	};
 	return (
