@@ -2,7 +2,7 @@ import React from 'react';
 import productImg from '../../../assets/income/product.svg';
 import { Select } from 'antd';
 
-const InventoryEditModal = ({ isOpen, onClose }) => {
+const InventoryEditModal = ({ dayOver, isOpen, onClose }) => {
     if (!isOpen) return null;
     const editOption = [
         {
@@ -24,7 +24,7 @@ const InventoryEditModal = ({ isOpen, onClose }) => {
                         <div className='flex flex-col gap-2'>
                             <p>광어</p>
                             <p>입고처 : 스파로스</p>
-                            <p className='text-xs truncate text-red-500 border-2 rounded-full items-center text-center p-1'>+3일</p>
+                            <p className='text-xs truncate text-red-500 border-2 rounded-full items-center text-center p-1'>+{dayOver}일</p>
                         </div>
                     </div>
                     <div className='flex justify-center mb-4'>

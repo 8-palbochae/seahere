@@ -47,7 +47,7 @@ const InventoryItemDetails = ({ country, natural, detailData }) => {
                             {price}
                             <span className='text-black'> 원</span>
                         </span>
-                        <span className="w-1/6 text-xs truncate text-red-500 border-2 rounded-full items-center text-center p-1">+{dayOver}</span>
+                        <span className="w-1/6 text-xs truncate text-red-500 border-2 rounded-full items-center text-center p-1">+{dayOver}일</span>
                     </div>
                 </div>
 
@@ -64,7 +64,7 @@ const InventoryItemDetails = ({ country, natural, detailData }) => {
                 </div>
             </div>
 
-            <InventoryEditModal isOpen={isModalOpen} onClose={closeModal} />
+            <InventoryEditModal dayOver={dayOver} isOpen={isModalOpen} onClose={closeModal} />
             <InventoryDeleteModal
                 isOpen={isDeleteConfirmOpen}
                 onClose={closeDeleteConfirm}
@@ -76,7 +76,7 @@ const InventoryItemDetails = ({ country, natural, detailData }) => {
 
 InventoryItemDetails.propTypes = {
     country: PropTypes.string.isRequired,
-    category: PropTypes.string.isRequired,
+    natural: PropTypes.string.isRequired,
     detailData: PropTypes.shape({
         inventoryId: PropTypes.number.isRequired,
         inventoryQuantity: PropTypes.number.isRequired,
