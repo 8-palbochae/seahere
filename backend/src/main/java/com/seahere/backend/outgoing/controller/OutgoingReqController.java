@@ -11,18 +11,18 @@ import java.util.List;
 @RestController
 public class OutgoingReqController {
 
-    private List<OutgoingReqMockDto> mockDtoList = new ArrayList<>();
-
     @GetMapping("/outgoings")
     public ResponseEntity<List> outgoingReqList(){
-        mockDtoList.add(new OutgoingReqMockDto("광어"));
-        mockDtoList.add(new OutgoingReqMockDto("광어"));
-        mockDtoList.add(new OutgoingReqMockDto("광어"));
-        mockDtoList.add(new OutgoingReqMockDto("광어"));
-        mockDtoList.add(new OutgoingReqMockDto("광어"));
-        mockDtoList.add(new OutgoingReqMockDto("광어"));
-        mockDtoList.add(new OutgoingReqMockDto("광어"));
-        mockDtoList.add(new OutgoingReqMockDto("광어"));
-        return ResponseEntity.ok(mockDtoList);
+        ArrayList<OutgoingReqMockDto> mockList = new ArrayList<>();
+        mockList.add(new OutgoingReqMockDto(1L,"스파로스","광어외3...","요청"));
+        mockList.add(new OutgoingReqMockDto(2L,"kdt","우럭외3...","요청"));
+        mockList.add(new OutgoingReqMockDto(3L,"부산시","고등어외3...","요청"));
+        mockList.add(new OutgoingReqMockDto(4L,"신세계","갈치외3...","요청"));
+        mockList.add(new OutgoingReqMockDto(5L,"아이앤씨","다시마외3...","요청"));
+        mockList.add(new OutgoingReqMockDto(5L,"아이앤씨","다시마외3...","요청"));
+        mockList.add(new OutgoingReqMockDto(5L,"아이앤씨","다시마외3...","요청"));
+        mockList.add(new OutgoingReqMockDto(5L,"아이앤씨","다시마외3...","요청"));
+
+        return ResponseEntity.ok(mockList);
     }
 }

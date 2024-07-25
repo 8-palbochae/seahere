@@ -45,6 +45,7 @@ function App() {
 			<BrowserRouter>
 				<Routes>
 					<Route element={<Layout />}>
+						<Route path="" element={<Main />} />
 						<Route path="/setting" element={<Setting />}>
 							<Route path="" element={<MainSetting />} />
 							<Route path="users" element={<UserInfoSetting />} />
