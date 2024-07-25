@@ -29,6 +29,7 @@ const SearchInput = ({value}) => {
         queryFn : ()=>getProductList(value),
         enabled : value!==undefined && value !== null
     });
+    
     const [query, setQuery] = useState('');
     const [suggestions, setSuggestions] = useState([]);
     
@@ -85,3 +86,4 @@ SearchInput.propTypes = {
 };
 
 export default SearchInput;
+
