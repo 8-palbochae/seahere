@@ -1,15 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import InventoryListItem from './InventoryListItem';
+//import inventoryMockup from './mockupdatas/inventoryMockup';
 
-const InventoryList = () => {
-    const items = Array.from({ length: 30 }, (_, index) => index + 1);
-    
+const InventoryList = ({ companyId, page, size, searchOption = "" }) => {
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const url = `http://localhost:8090/App/inventories?companyId=${companyId}&page=${page}&size=${size}&search=${searchOption}`;
+                const response = await axios.get(url);
+                setProducts(response.data.products);
+
+                // setProducts(inventoryMockup.products);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        fetchData();
+    }, [companyId, page, size, searchOption]);
+
     return (
         <div>
-           {items.map(item => (
-                <InventoryListItem key={item} /> // 각 InventoryItem에 고유한 key를 추가합니다
+            {products.map(product => (
+                <InventoryListItem
+                    key={product.productId}
+                    product={product}
+                />
             ))}
-
         </div>
     );
 };

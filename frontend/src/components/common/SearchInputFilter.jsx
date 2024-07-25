@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { iventoryIcon } from "../../constants/iventory/iventory.image";
+import { inventoryIcon } from "../../constants/inventory/inventory.image";
 
 const SearchInputFilter = () => {
 	return (
@@ -8,7 +8,7 @@ const SearchInputFilter = () => {
 			<div className="flex h-11 bg-gray-100 justify-around items-center gap-3 m-2 rounded">
 				<img
 					className="w-8 object-cover ml-3 mr-2"
-					src={iventoryIcon.searchIcon}
+					src={inventoryIcon.searchIcon}
 					alt=""
 				/>
 				<input
@@ -18,7 +18,7 @@ const SearchInputFilter = () => {
 				/>
 				<img
 					className="w-8 object-cover mr-3"
-					src={iventoryIcon.filterIcon}
+					src={inventoryIcon.filterIcon}
 					alt=""
 				/>
 			</div>
