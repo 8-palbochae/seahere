@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const OutgoingReq = () => {
 	const navigate = useNavigate();
 	const onClick = () => {
-		navigate("/outgoings/requests");
+		navigate("/main/outgoings");
 	};
 	return (
 		<div
