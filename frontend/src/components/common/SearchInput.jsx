@@ -23,11 +23,9 @@ import { getProductList } from '../../api/incoming/incomingApi';
 import { useQuery } from '@tanstack/react-query';
 
 const SearchInput = ({ value }) => {
-
-
-    console.log(`이건 타입 ${value}`);
     let { data, isPending, isError, error } = useQuery({
-        queryKey: ['productList'],
+        queryKey: ["productList"],
+        // queryFn : getProductList,
         queryFn: () => getProductList(value),
         enabled: value !== undefined && value !== null
     });
