@@ -1,7 +1,7 @@
 import React from "react";
 import SearchInput from "../../common/SearchInput";
 
-const IncomingSearch = () => {
+const IncomingSearch = ({ type }) => {
 	return (
 		<div className="flex flex-col rounded-[10px] shadow-lg w-full p-3">
 			<div className="flex gap-2 items-center">
@@ -10,7 +10,7 @@ const IncomingSearch = () => {
 				</div>
 				<div>입고</div>
 			</div>
-			<SearchInput />
+			<SearchInput value={type} />
 		</div>
 	);
 };

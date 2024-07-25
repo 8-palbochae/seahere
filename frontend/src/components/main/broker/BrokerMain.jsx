@@ -16,7 +16,7 @@ const BrokerMain = () => {
 				<InventorySearch />
 			</div>
 			<div className="p-2 rounded-[20px] w-full">
-				<IncomingSearch />
+				<IncomingSearch type="incoming" />
 			</div>
 			<div className="p-2 rounded-[20px] w-full">
 				<OutgoingReq />
