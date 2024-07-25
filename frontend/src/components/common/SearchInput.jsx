@@ -1,14 +1,14 @@
 // import React from 'react';
 // import PropTypes from 'prop-types';
-// import { iventoryIcon } from '../../constants/iventory/iventory.image';
+// import { inventoryIcon } from '../../constants/inventory/inventory.image';
 
 // const SearchInput = () => {
 //     return (
 //         <div>
 //             <div className='flex h-11 bg-gray-100 justify-around items-center gap-3 m-2 rounded'>
-//                 <img className='w-8 object-cover ml-3 mr-2' src={iventoryIcon.searchIcon} alt="" />
+//                 <img className='w-8 object-cover ml-3 mr-2' src={inventoryIcon.searchIcon} alt="" />
 //                 <input className='w-4/5 h-8 p-2 bg-gray-200 rounded' type="text" placeholder='검색' />
-//                 <img className='w-8 object-cover mr-3' src={iventoryIcon.scanIcon} alt="" />
+//                 <img className='w-8 object-cover mr-3' src={inventoryIcon.scanIcon} alt="" />
 //             </div>
 //         </div>  
 //     );
@@ -18,40 +18,40 @@
 
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { iventoryIcon } from '../../constants/iventory/iventory.image';
+import { inventoryIcon } from '../../constants/inventory/inventory.image';
 import { getProductList } from '../../api/incoming/incomingApi';
 import { useQuery } from '@tanstack/react-query';
 
-const SearchInput = ({value}) => {
-    let {data, isPending, isError, error}  = useQuery({
-        queryKey : ["productList"],
+const SearchInput = ({ value }) => {
+    let { data, isPending, isError, error } = useQuery({
+        queryKey: ["productList"],
         // queryFn : getProductList,
-        queryFn : ()=>getProductList(value),
-        enabled : value!==undefined && value !== null
+        queryFn: () => getProductList(value),
+        enabled: value !== undefined && value !== null
     });
-    
+
     const [query, setQuery] = useState('');
     const [suggestions, setSuggestions] = useState([]);
-    
+
     useEffect(() => {
-        if(!isPending){
-        if (query.length > 0) {
-            // Filter the data based on the query
-            const filteredSuggestions = data.filter(item =>
-                item.toLowerCase().includes(query.toLowerCase())
-            );
-            setSuggestions(filteredSuggestions);
-        } else {
-            setSuggestions([]);
+        if (!isPending) {
+            if (query.length > 0) {
+                // Filter the data based on the query
+                const filteredSuggestions = data.filter(item =>
+                    item.toLowerCase().includes(query.toLowerCase())
+                );
+                setSuggestions(filteredSuggestions);
+            } else {
+                setSuggestions([]);
+            }
         }
-    }
-    
+
     }, [query, data]);
 
     return (
         <div>
             <div className='flex h-11 bg-gray-100 justify-around items-center gap-3 m-2 rounded'>
-                <img className='w-8 object-cover ml-3 mr-2' src={iventoryIcon.searchIcon} alt="" />
+                <img className='w-8 object-cover ml-3 mr-2' src={inventoryIcon.searchIcon} alt="" />
                 <input
                     className='w-4/5 h-8 p-2 bg-gray-200 rounded'
                     type="text"
@@ -59,7 +59,7 @@ const SearchInput = ({value}) => {
                     value={query}
                     onChange={e => setQuery(e.target.value)}
                 />
-                <img className='w-8 object-cover mr-3' src={iventoryIcon.scanIcon} alt="" />
+                <img className='w-8 object-cover mr-3' src={inventoryIcon.scanIcon} alt="" />
             </div>
             {suggestions.length > 0 && query && (
                 <div className="bg-white border border-gray-300 rounded mt-1">
@@ -82,7 +82,7 @@ const SearchInput = ({value}) => {
 };
 
 SearchInput.propTypes = {
-    iventoryIcon: PropTypes.object.isRequired,
+    inventoryIcon: PropTypes.object.isRequired,
 };
 
 export default SearchInput;
