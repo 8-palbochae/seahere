@@ -1,4 +1,4 @@
-package com.seahere.backend.common.jwt;
+package com.seahere.backend.common.jwt.service;
 
 
 import com.auth0.jwt.JWT;

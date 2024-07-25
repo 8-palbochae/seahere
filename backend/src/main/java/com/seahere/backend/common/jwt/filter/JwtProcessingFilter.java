@@ -1,6 +1,6 @@
 package com.seahere.backend.common.jwt.filter;
 
-import com.seahere.backend.common.jwt.JwtService;
+import com.seahere.backend.common.jwt.service.JwtService;
 import com.seahere.backend.common.jwt.util.PasswordUtil;
 import com.seahere.backend.user.domain.UserEntity;
 import com.seahere.backend.user.repository.UserRepository;
