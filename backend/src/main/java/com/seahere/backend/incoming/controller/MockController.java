@@ -10,7 +10,7 @@ import java.util.List;
 @RestController
 public class MockController {
 
-    @GetMapping("/product-search")
+    @GetMapping("/product-search-incoming")
     public ResponseEntity<List<String>> getMockData() {
         List<String> mock = new ArrayList<>();
         mock.add("광어");

@@ -22,11 +22,14 @@ import { iventoryIcon } from '../../constants/iventory/iventory.image';
 import { getProductList } from '../../api/incoming/incomingApi';
 import { useQuery } from '@tanstack/react-query';
 
-const SearchInput = () => {
+const SearchInput = ({value}) => {
+    console.log(`이건 타입 ${value}`);
+
     let {data, isPending, isError, error}  = useQuery({
-        queryKey : ["productList"],
-        queryFn : getProductList
+        queryKey : ['productList'],
+        queryFn : () => getProductList(value)
     });
+    
     const [query, setQuery] = useState('');
     const [suggestions, setSuggestions] = useState([]);
     
@@ -83,3 +86,4 @@ SearchInput.propTypes = {
 };
 
 export default SearchInput;
+
