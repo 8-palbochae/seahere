@@ -1,4 +1,4 @@
-package com.seahere.backend.inventory.repository;
+package com.seahere.backend.inventory.entity;
 
 import lombok.Getter;
 
