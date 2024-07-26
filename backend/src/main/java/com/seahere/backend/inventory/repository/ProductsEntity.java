@@ -1,13 +1,11 @@
 package com.seahere.backend.inventory.repository;
 
 import lombok.Getter;
-import lombok.Setter;
 
 import java.util.Date;
 import java.util.List;
 
 @Getter
-@Setter
 public class ProductsEntity {
     private int productsId;
     private String productName;
