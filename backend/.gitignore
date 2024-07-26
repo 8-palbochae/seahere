@@ -4,6 +4,7 @@ build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
+!**/src/test/**/generated/
 
 ### STS ###
 .apt_generated
@@ -36,3 +37,7 @@ out/
 ### VS Code ###
 .vscode/
 /src/main/resources/application-oauth.yml
+/src/main/resources/application-jwt.yml
+
+### Query DSL ###
+/src/main/generated/

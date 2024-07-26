@@ -13,13 +13,6 @@ const OutgoingReqListModal = ({ handleCloseModal, outgoingId }) => {
 		enable: !!outgoingId,
 	});
 	console.log(data);
-	/* const useSearchResults = () => {
-		return useQuery({
-			queryKey: ["outgoingDetail", outgoingId],
-			queryFn: () => getOutgoingReqDetailList(outgoingId),
-			enable: !!outgoingId,
-		});
-	};     */
 	const handleClose = () => {
 		setIsModalOpen(false);
 		handleCloseModal();
