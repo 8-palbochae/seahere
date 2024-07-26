@@ -39,11 +39,11 @@ public class UserEntity {
     private SocialType socialType;
 
     private String socialId;
-
+    private String profileImage;
     private String refreshToken;
 
     @Builder
-    public UserEntity(Long id, String username, String email, String password, Address address, Boolean leave, Role role, SocialType socialType, String socialId, String refreshToken) {
+    public UserEntity(Long id, String username, String email, String password, Address address, Boolean leave, Role role, SocialType socialType, String socialId, String profileImage, String refreshToken) {
         this.id = id;
         this.username = username;
         this.email = email;
@@ -53,6 +53,7 @@ public class UserEntity {
         this.role = role;
         this.socialType = socialType;
         this.socialId = socialId;
+        this.profileImage = profileImage;
         this.refreshToken = refreshToken;
     }
 
