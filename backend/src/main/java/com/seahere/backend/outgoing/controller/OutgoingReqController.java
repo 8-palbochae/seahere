@@ -40,10 +40,10 @@ public class OutgoingReqController {
     @GetMapping("/outgoings/{outgoingId}")
     public ResponseEntity<List> outgoingReqDetailList(@PathVariable("outgoingId") Long outgoingId){
         List<OutgoingReqMockDetailsDto> mockDetailList = new ArrayList<>();
-        mockDetailList.add(new OutgoingReqMockDetailsDto(1L, "", "광어",20,100,80,100000));
-        mockDetailList.add(new OutgoingReqMockDetailsDto(1L, "", "넙치",30,100,70,100000));
-        mockDetailList.add(new OutgoingReqMockDetailsDto(1L, "", "고등어",40,100,60,200000));
-        mockDetailList.add(new OutgoingReqMockDetailsDto(1L, "", "갈치",50,100,50,300000));
+        mockDetailList.add(new OutgoingReqMockDetailsDto(1L, 1L,"", "광어",20,100,80,100000));
+        mockDetailList.add(new OutgoingReqMockDetailsDto(1L, 2L,"", "넙치",30,100,70,100000));
+        mockDetailList.add(new OutgoingReqMockDetailsDto(1L, 3L,"", "고등어",40,100,60,200000));
+        mockDetailList.add(new OutgoingReqMockDetailsDto(1L, 4L,"", "갈치",50,100,50,300000));
         return ResponseEntity.ok(mockDetailList);
     }
 

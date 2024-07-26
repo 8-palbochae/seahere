@@ -8,6 +8,7 @@ import lombok.Getter;
 public class OutgoingReqMockDetailsDto {
 
     private Long outgoingId;
+    private Long outgoingDetailId;
     private String imgSrc;
     private String productName;
     private int outgoingQuantity;
