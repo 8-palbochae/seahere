@@ -45,6 +45,7 @@ function App() {
 			<BrowserRouter>
 				<Routes>
 					<Route element={<Layout />}>
+						<Route path="" element={<Main />} />
 						<Route path="/setting" element={<Setting />}>
 							<Route path="" element={<MainSetting />} />
 							<Route path="users" element={<UserInfoSetting />} />
@@ -66,6 +67,10 @@ function App() {
 						</Route>
 						<Route path="/main" element={<Main />}>
 							<Route path="" element={<BrokerMain />} />
+							<Route
+								path="outgoings"
+								element={<OutgoingReqList />}
+							/>
 						</Route>
 						<Route path="/histories" element={<HistoryOutlet />}>
 							<Route path="" element={<History />} />
@@ -76,10 +81,6 @@ function App() {
 							<Route
 								path="incomingList"
 								element={<IncomingList />}
-							/>
-							<Route
-								path="outgoings/requests"
-								element={<OutgoingReqList />}
 							/>
 							<Route path="adjusts" element={<AdjustList />} />
 						</Route>
