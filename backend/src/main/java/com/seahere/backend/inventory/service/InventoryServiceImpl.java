@@ -1,10 +1,22 @@
 package com.seahere.backend.inventory.service;
 
-import com.seahere.backend.inventory.domain.Product;
+import com.seahere.backend.inventory.repository.ProductsEntity;
 
-import java.util.List;
+public class InventoryServiceImpl implements InventoryService {
 
-public class InventoryServiceImpl implements InventoryService{
-    public List<Product> findAll(Long companyId) {
+    @Override
+    public ProductsEntity findAllProducts() {
+
+        return null;
+    }
+
+    @Override
+    public void deleteInventory() {
+
+    }
+
+    @Override
+    public void modifyInventory() {
+
     }
 }

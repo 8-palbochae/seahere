@@ -3,11 +3,11 @@ import { Select } from 'antd';
 import { country, natural, status } from '../../constants/income/ProductType';
 import productImg from '../../assets/income/product.svg';
 
-const ProductInfo = () => {
+const ProductInfo = ({selectedProduct}) => {
   return  (
     <div className='shadow-md border border-gray-200 rounded-lg p-6 mt-6 mx-4'>
         <div className='flex justify-center'>
-            <span className='text-black font-bold text-2xl mb-6'>광어</span>
+            <span className='text-black font-bold text-2xl mb-6'>{selectedProduct}</span>
         </div>
         <div className='flex justify-around '>
             <div className='w-36 h-36  flex justify-center items-center overflow-hidden rounded-xl'>
