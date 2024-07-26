@@ -1,7 +1,6 @@
 // src/components/TradeInventory.js
 
 import React, { useState } from "react";
-import PropTypes from "prop-types";
 import CartModal from "../cart/CartModal";
 import BrokerInventoryItem from "./BrokerInventoryItem";
 import { useNavigate } from "react-router-dom";
