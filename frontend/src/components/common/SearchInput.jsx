@@ -80,10 +80,5 @@ const SearchInput = ({ value }) => {
         </div>
     );
 };
-
-SearchInput.propTypes = {
-    inventoryIcon: PropTypes.object.isRequired,
-};
-
 export default SearchInput;
 

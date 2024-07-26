@@ -8,7 +8,7 @@ const InventorySearch = () => {
 				<div className=" border-r border-gray-300 pr-1">여데이~</div>
 				<div>재고</div>
 			</div>
-			<SearchInput />
+			<SearchInput value="incoming" />
 		</div>
 	);
 };

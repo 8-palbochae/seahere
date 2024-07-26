@@ -9,7 +9,7 @@ const getProductList = async (value) => {
 
             }
         })
-        console.log("url: ", `${url}/product-search-${value}`);
+        console.log("자동 검색 완성 데이터 url: ", `${url}/product-search-${value}`);
         return res.data;
 
     } catch (error) {
