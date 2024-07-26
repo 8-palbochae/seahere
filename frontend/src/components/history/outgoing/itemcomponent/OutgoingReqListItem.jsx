@@ -42,7 +42,10 @@ const OutgoingReqListItem = ({ item }) => {
 			</div>
 
 			{isModalOpen && (
-				<OutgoingReqListModal handleCloseModal={handleCloseModal} />
+				<OutgoingReqListModal
+					handleCloseModal={handleCloseModal}
+					outgoingId={item.outgoingId}
+				/>
 			)}
 		</div>
 	);

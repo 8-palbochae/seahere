@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { DatePicker, Space } from "antd";
 import dayjs from "dayjs";
 import customParseFormat from "dayjs/plugin/customParseFormat";
-import userEvent from "@testing-library/user-event";
 
 dayjs.extend(customParseFormat);
 
-const { RangePicker } = DatePicker;
 const dateFormat = "YYYY-MM-DD";
 
-const PeriodStart = ({ setStartDate }) => {
+const PeriodStart = ({ setStartDate, startDate }) => {
 	const handleStartChange = (date) => {
 		setStartDate(dayjs(date).format(dateFormat));
 	};
@@ -17,8 +15,10 @@ const PeriodStart = ({ setStartDate }) => {
 		<Space direction="vertical" size={12}>
 			<DatePicker
 				format={dateFormat}
+				onPanelChange={startDate}
 				inputReadOnly={true} // 자판 비활성화
 				onChange={handleStartChange}
+				placeholder={startDate}
 			/>
 		</Space>
 	);
